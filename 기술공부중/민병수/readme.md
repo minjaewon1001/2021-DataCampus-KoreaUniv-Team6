@@ -90,9 +90,9 @@ SGD를 활용해 CNN을 학습시켰고, learning rate는 0.5, 훈련 시간은 
 
 
 # 5. Experiments
-8M명의 서로 다른 사람으로 이루어진 100M~200M의 training face thumbnails이 사용됐다.
-face detector 는 각각의 이미지마다 실행되고 각 얼굴에 딱 맞는 바운딩 박스가 생성됐다. 
-이 face thumbnails들은 각 네트워크의 input size로 resizing 됐다. input size는 96x96~224x224pixels으로 설정했다.
+*8M명의 서로 다른 사람으로 이루어진 100M~200M의 training face thumbnails이 사용됐다.
+*face detector 는 각각의 이미지마다 실행되고 각 얼굴에 딱 맞는 바운딩 박스가 생성됐다. 
+*이 face thumbnails들은 각 네트워크의 input size로 resizing 됐다. input size는 96x96~224x224pixels으로 설정했다.
 
 ##### Effect of CNN Model
 
