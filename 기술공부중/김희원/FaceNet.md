@@ -15,7 +15,7 @@
   - https://m.blog.naver.com/4u_olion/221478534498
   - https://m.blog.naver.com/zxc1552916/221957018715
   - https://wwiiiii.tistory.com/entry/Pairwise-Triplet-Loss
-  
+  - https://heung-bae-lee.github.io/2020/07/19/NLP_14/   (Feature and Feature vector)
 
 # Abstract
 
