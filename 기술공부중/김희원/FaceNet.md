@@ -7,7 +7,7 @@
 >
 > 저자 : Florian Schroff, Dmitry Kalenichenko, James Philbin
 
-* 참고 : (공부예정)
+* 참고 : (공부중)
   - https://webit22.tistory.com/22
   - https://ccss17.github.io/paper/facenet/
   - https://kau-deeperent.tistory.com/75
