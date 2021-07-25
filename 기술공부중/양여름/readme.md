@@ -1,9 +1,15 @@
 Face Detection Explained: State-of-the-Art Methods and Best Tools
 ================================================================
 * Sciforce / 2021 jun 17
+* url: https://medium.com/sciforce/face-detection-explained-state-of-the-art-methods-and-best-tools-f730fca16294
+> facenet에 대해 먼저 공부하기 전에 얼굴 감지, 인식 기술에 대한 간단한 원리와 전반적인 흐름을 보고자 정리한 글이다.
+> 
+> 얼굴 인식을 위한 solution에서 우리가 공부하기 좋아보이는 여러 기술들을 발견했다.
 
 ## Face detection
-얼굴 인식에 있어서 필수적인 부분으로 사진이나 비디오에서 얼굴의 수를 결정함. 이 때 자세한 것은 저장하거나 기억하지 않는다. 나이나 성별과 같은 인구통계학적 데이터를 정의할 수는 있으나 개개인을 인식하지는 못한다.
+얼굴 인식에 있어서 필수적인 부분으로 사진이나 비디오에서 얼굴의 수를 결정함. 이 때 자세한 것은 저장하거나 기억하지 않는다. 
+
+나이나 성별과 같은 인구통계학적 데이터를 정의할 수는 있으나 개개인을 인식하지는 못한다.
 ## Face recognition
 미리 존재하는 얼굴의 데이터베이스로부터 사진이나 영상 속 얼굴을 식별한다. 구별되는 얼굴 특징의 데이터 베이스를 만들려면 실제로 얼굴을 시스템에 등록해야한다. 그런 다음 시스템은 새 이미지를 주요 feature로 나누고 데이터베이스에 저장된 정보과 비교한다.
 
@@ -17,12 +23,14 @@ Face Detection Explained: State-of-the-Art Methods and Best Tools
 ### 1. Knowledge-based face detection
 우리는 눈과 코와 입의 위치를 알고있다. 이렇듯이 얼굴 안에서 어떠한 거리 등의 적절한 규칙의 집합을 규정하여 얼굴을 감지하는 방법이다. 
 만약 규칙이 너무 일반적이거나 너무 자세하다면 시스템은 많은 false positive로 귀결된다. (실제로는 아닌데 맞다고 나옴)
+
 그러나 모든 피부색에서 잘 작동하지는 않으며 따라서 조명 환경에 큰 영향을 받는다. 
 ![image](https://user-images.githubusercontent.com/67731178/126885576-707c3d45-968c-445f-9e4c-a18c67964f1a.png)
 
 ### 2. template matching
 템플릿 매칭 방법은 미리 정의되고 파라미터화된 얼굴 템플릿을 사용하여 input 이미지와의 상관 관계를 통해 얼굴을 찾거나 감지하는 방법이다.
 edge 검출 방법을 사용하여 edge로 얼굴 모델을 구성할 수 있다.
+
 변형으로 나온 것이 제어된 배경 기술이다. 정면 얼굴이미지와 일반 배경이 있는 경우 운이 좋으면 배경을 제거하고 얼굴 경계를 남길 수 있다.
 ![image](https://user-images.githubusercontent.com/67731178/126885674-6d2fe54b-0874-4f88-aad8-51537ca3f1f9.png)
 
@@ -30,15 +38,19 @@ edge 검출 방법을 사용하여 edge로 얼굴 모델을 구성할 수 있다
 
 ### 3. Feature-based face detection
 특징 기반 방법은 얼굴의 구조적인 특징을 추출한다. 분류기로서 학습되고 얼굴과 얼굴이 아닌지역을 구별하기 위해 사용된다.
+
 하나의 예시가 color-based face detection인데, 색이있는 이미지나 비디오에서 전형적인 피부색이 있는 영역을 스캔하고 얼굴 부분을 찾는다.
 
 #### Haar Feature Selection
 Haar Feature Selection은 얼굴의 특징으로부터 일치를 형성하기 위해 사람의 얼굴의 비슷한 특징에 의존한다. (눈, 입, 콧대 등의 위치나 픽셀 강도의 방향 기울기)
+
 각 정면에서 6061개의 특징을 얻기 위해 38개의 계단식 분류기 레이어가 있다. 
 
 #### HOG
 HOG(Histogram of Oriented Gradients)는 객체감지를 위한 특징 추출기이다. 추출된 특징은 이미지의 기울기(방향 기울기), 방향의 분포(히스토그램)이다.
+
 ![image](https://user-images.githubusercontent.com/67731178/126885877-3b441e03-4bbc-44ce-a0a9-27cd1404608b.png)
+
 gradients는 일반적으로 크고 둥근 모서리와 코너이며 이 지역을 감지하도록 한다. 픽셀 강도를 고려하는 대신 이미지 세그먼트를 지역화하기 위해 빛 방향을 나타내기 위해 gradient vector의 발생을 계산한다.
 이 방법은 중복 로컬 대비 정규화를 사용하여 정확도를 개선한다.
 
@@ -47,6 +59,7 @@ gradients는 일반적으로 크고 둥근 모서리와 코너이며 이 지역�
 
 #### Eigenface 기반 알고리즘 
 PCA(Principal Component Analysis)를 사용하여 얼굴을 효율적으로 나타낸다. PCA는 데이터의 분산을 가장 잘 설명하는 데이터 세트의 차원을 낮추기 위해 이미지 세트에 적용된다. 이 방법에서 얼굴은 고유면(고유 벡터 집합)의 선형 조합으로 모델링될 수 있다. 이 경우 얼굴 인식은 선형 표현 계수의 비교를 기반으로 한다.
+
 ![image](https://user-images.githubusercontent.com/67731178/126886080-cec8fe9a-8213-4039-bfc4-4339fffc99cc.png)
 
 #### Distribution-based algorithms
