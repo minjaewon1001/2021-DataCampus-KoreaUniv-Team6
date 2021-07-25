@@ -84,3 +84,5 @@ REST API를 제공하는 것을 목표로...
 다양한 얼굴 인식 모듈
 #### OpenFace (.)
 심층 신경망을 사용한 얼굴 인식의 Python 및 Torch 구현. CVPR 2015 논문 FaceNet: A Unified Embedding for Face Recognition and Clustering에 기반을 두고 있다.
+
+> (.)으로 표시한 것은 더 알아보기 좋아보이는 기술들이다.
