@@ -23,7 +23,7 @@
 ![image](https://user-images.githubusercontent.com/87646049/126885532-b7031a90-c241-4c20-bd9e-8d3baf97b103.png)
 
 
-### 2. Template matching
+## 2. Template matching
 - 템플릿 매칭 방법은 미리 정의되거나 매개변수화된 얼굴 템플릿을 사용하여 미리 정의되거나 변형 가능한 템플릿과 입력 이미지 간의 상관 관계를 통해 얼굴을 찾거나 감지함
 - 엣지 검출 방법을 사용하여 엣지로 얼굴 모델을 구성할 수 있음
 
@@ -32,7 +32,7 @@
 - 변형 기술로 'controlled background technique'가 있다. 정면 얼굴사진과 배경 사진이 있다면, 얼굴 영역을 제외한 배경을 제거할 수 있다..?
 
 
-### 3. Feature-based face detection
+## 3. Feature-based face detection
 - 특징 기반 방법은 얼굴의 구조적 특징을 추출한다. 분류기로 학습시킨 다음 얼굴 및 비얼굴 영역을 구별하는 데 사용됨
 - 이 방법의 한 예는 'color-based face detection'인데, 컬러 이미지 또는 비디오에서 일반적인 피부색을 가진 영역을 스캔한 다음 얼굴 부분을 찾는 기법임
 
@@ -54,7 +54,7 @@
 ![image](https://user-images.githubusercontent.com/87646049/126886015-e62b23b2-594b-4648-8cc5-44a24856c33b.png)
 
 
-### 4. Appearance-based face detection
+## 4. Appearance-based face detection
 - 얼굴 모델을 찾기 위해 일련의 대표 훈련 얼굴 이미지에 의존함
 - 얼굴 이미지의 관련 특성을 찾고 특징을 추출하기 위해 기계 학습 및 통계 분석에 의존함
 - 이 방법은 여러 알고리즘을 통합함 (아래 서술)
