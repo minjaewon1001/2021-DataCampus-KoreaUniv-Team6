@@ -74,7 +74,6 @@
 - 표준 detection
 
 #### 4) Sparse Network of Winnows
-- 
 
 #### 5) Naive Bayes Classifiers
 
@@ -84,3 +83,84 @@
 
 
 ## Video Processing: Motion-based face detection
+- 비디오 이미지에서 움직임을 가이드로 사용할 수 있음
+- 즉, 특정 얼굴 움직임 중 하나가 눈을 깜박이는 것이라면, 소프트웨어가 규칙적인 눈 깜박임 패턴을 결정할 수 있다면 얼굴을 결정할 수 있다.
+
+![image](https://user-images.githubusercontent.com/87646049/126894632-9dcb6b71-fba0-4c22-9968-f76944fe24fc.png)
+
+- 다른 다양한 동작들은 벌린 콧구멍, 올라간 눈썹, 주름진 이마, 열린 입과 같이 이미지에 얼굴이 포함될 수 있음을 나타냅니다. 
+- 얼굴이 감지되고 특정 얼굴 모델이 특정 움직임과 일치하면, 추가적인 얼굴의 움직임을 포착하는 얼굴 추적이 가능합니다.
+- 최첨단(state-of-the-art) 솔루션은 일반적으로 feature을 추출하는 여러 가지 방법(예를 들어 기계 학습 또는 딥 러닝 알고리즘)을 결합합니다.
+
+## Face detection tools
+단순한 얼굴 감지에서 감정 감지 및 얼굴 인식에 이르기까지 다양한 기능을 제공하는 독점 및 오픈 소스의 수십 가지 얼굴 감지 솔루션이 있습니다.
+
+### 독점 face detection software
+
+##### 1) Amazon Rekognition
+- 딥러닝 기반
+- face detection & face recognition 모두에 강력함
+- 8가지 감정도 감지할 수 있음 (기쁨, 슬픔, 화남 등)
+- 단일 이미지에서 최대 100개의 얼굴 판별 가능
+
+##### 2) Face++
+- iOS 및 Android용 오프라인 SDK(소프트웨어 개발 키트)를 포함하는 얼굴 분석 클라우드 서비스
+- 총 요청 횟수에 제한은 없지만, 초당 3회 제한
+- Python, PHP, Java, Javascript, C++, Ruby, iOS, Matlab 지원
+- 성별, 감정 인식 및 연령대 추정, 랜드마크 감지 서비스 제공
+- Leveno 제품에 포함됨
+
+##### 3) Lambda Labs (Face Recognition and Face Detection API)
+- 얼굴 인식, 얼굴 감지, 눈.코.입 위치, 성별 분류 제공
+
+##### 4) Kairos (API)
+- 다양한 이미지 인식 솔루션 제공
+- 성별, 나이, 얼굴 인식, 사진 및 비디오의 감정적 깊이 식별
+
+##### 5) Microsoft Azure Cognitive Services Face API
+- 기능에는 연령 추정, 성별 및 감정 인식, 랜드마크 감지가 포함됨
+- SDK는 Go, Python, Java, .Net 및 Node.js를 지원함
+
+##### 6) Paravision 
+
+##### 7) Trueface
+
+
+### 오픈 소스 face detection software
+
+##### 1) Ageitgey/face_recognition
+- 가장 광범위한 얼굴 인식 라이브러리 중 하나인 40,000개의 별이 있는 GitHub 저장소
+- "파이썬 및 명령줄을 위한 가장 간단한 얼굴 인식 API"라고도 함
+- 단점은 최신 릴리즈가 2018년에 출시되었다는 것이며, 2021년에는 모델 인식 정확도가 99.38%로 훨씬 더 좋아질 수 있다는 것임
+- REST API가 없음
+
+##### 2) Deepface
+- GitHub에서 별 1,5000개를 받은 Python용 프레임워크
+- 나이, 성별, 인종 및 감정과 같은 얼굴 속성 분석을 제공
+- REST API 제공
+ 
+##### 3) FaceNet
+- Google에서 개발
+- Python 라이브러리를 사용하여 구현
+- 
+
+##### 4) InsightFace
+- GitHub에서 9,2000개의 별을 가진 또 다른 Python 라이브러리
+- 인식 정확도는 99.86%
+- 얼굴 감지, 인식 및 정렬을 위한 다양한 알고리즘을 제공함
+ 
+##### 5) InsightFace-REST
+- InsightFace 얼굴 감지 및 인식 파이프라인을 위해 편리하고 쉽게 배포 가능하며 확장 가능한 REST API를 제공하는 것을 목표로 함
+ 
+##### 6) OpenCV
+- API가 아님
+- 3,000개 이상의 최적화된 컴퓨터 비전 알고리즘이 있음
+- ex) Eigenfacerecognizer, LBPHFacerecognizer, lpbhfacerecognition 얼굴 인식 모듈 등
+
+##### 7) OpenFace
+- 심층 신경망을 사용해 얼굴 인식의 Python 및 Torch 구현
+- 참조: CVPR 2015 paper "FaceNet: A Unified Embedding for Face Recognition and Clustering"
+
+## 결론
+- 얼굴 감지는 인식, 감정 감지 또는 얼굴 생성을 포함한 추가 얼굴 분석을 위한 첫 번째 단계임
+- 또한 추가 처리를 위해 필요한 모든 데이터를 수집하는 것이 중요함
