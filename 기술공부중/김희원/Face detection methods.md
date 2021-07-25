@@ -19,6 +19,8 @@
 ## 1. Knowledge-based
 - 얼굴이 서로 일정한 거리와 위치 내에 코, 눈, 입이 있어야 함
 - 문제는 적절한 규칙 집합을 구축하는 것 (너무 상세하지 않게)
+- 모든 피부색에 대해 작동x
+- 조명 조건에 영향을 크게 
 
 ![image](https://user-images.githubusercontent.com/87646049/126885532-b7031a90-c241-4c20-bd9e-8d3baf97b103.png)
 
