@@ -14,16 +14,16 @@
 ![image](https://user-images.githubusercontent.com/87646049/126888014-ce175b3f-4eeb-4534-8a2a-7c937e85dfd6.png)
 
 
-## Face detection methods
+# Face detection methods (4가지)
 
-### ① Knowledge-based
+## 1. Knowledge-based
 - 얼굴이 서로 일정한 거리와 위치 내에 코, 눈, 입이 있어야 함
 - 문제는 적절한 규칙 집합을 구축하는 것 (너무 상세하지 않게)
 
 ![image](https://user-images.githubusercontent.com/87646049/126885532-b7031a90-c241-4c20-bd9e-8d3baf97b103.png)
 
 
-### ② Template matching
+### 2. Template matching
 - 템플릿 매칭 방법은 미리 정의되거나 매개변수화된 얼굴 템플릿을 사용하여 미리 정의되거나 변형 가능한 템플릿과 입력 이미지 간의 상관 관계를 통해 얼굴을 찾거나 감지함
 - 엣지 검출 방법을 사용하여 엣지로 얼굴 모델을 구성할 수 있음
 
@@ -32,7 +32,7 @@
 - 변형 기술로 'controlled background technique'가 있다. 정면 얼굴사진과 배경 사진이 있다면, 얼굴 영역을 제외한 배경을 제거할 수 있다..?
 
 
-### ③ Feature-based face detection
+### 3. Feature-based face detection
 - 특징 기반 방법은 얼굴의 구조적 특징을 추출한다. 분류기로 학습시킨 다음 얼굴 및 비얼굴 영역을 구별하는 데 사용됨
 - 이 방법의 한 예는 'color-based face detection'인데, 컬러 이미지 또는 비디오에서 일반적인 피부색을 가진 영역을 스캔한 다음 얼굴 부분을 찾는 기법임
 
@@ -54,7 +54,7 @@
 ![image](https://user-images.githubusercontent.com/87646049/126886015-e62b23b2-594b-4648-8cc5-44a24856c33b.png)
 
 
-### ④ Appearance-based face detection
+### 4. Appearance-based face detection
 - 얼굴 모델을 찾기 위해 일련의 대표 훈련 얼굴 이미지에 의존함
 - 얼굴 이미지의 관련 특성을 찾고 특징을 추출하기 위해 기계 학습 및 통계 분석에 의존함
 - 이 방법은 여러 알고리즘을 통합함 (아래 서술)
@@ -69,7 +69,6 @@
 
 #### 2) Distribution-based algorithms
 
-
 #### 3) Hidden Markov Model
 - 표준 detection
 
@@ -82,7 +81,7 @@
 #### 7) Neural networks
 
 
-## Video Processing: Motion-based face detection
+# Video Processing: Motion-based face detection
 - 비디오 이미지에서 움직임을 가이드로 사용할 수 있음
 - 즉, 특정 얼굴 움직임 중 하나가 눈을 깜박이는 것이라면, 소프트웨어가 규칙적인 눈 깜박임 패턴을 결정할 수 있다면 얼굴을 결정할 수 있다.
 
@@ -95,7 +94,7 @@
 ## Face detection tools
 단순한 얼굴 감지에서 감정 감지 및 얼굴 인식에 이르기까지 다양한 기능을 제공하는 독점 및 오픈 소스의 수십 가지 얼굴 감지 솔루션이 있습니다.
 
-### 독점 face detection software
+## 독점 face detection software
 
 ##### 1) Amazon Rekognition
 - 딥러닝 기반
@@ -126,7 +125,7 @@
 ##### 7) Trueface
 
 
-### 오픈 소스 face detection software
+## 오픈 소스 face detection software
 
 ##### 1) Ageitgey/face_recognition
 - 가장 광범위한 얼굴 인식 라이브러리 중 하나인 40,000개의 별이 있는 GitHub 저장소
@@ -161,6 +160,6 @@
 - 심층 신경망을 사용해 얼굴 인식의 Python 및 Torch 구현
 - 참조: CVPR 2015 paper "FaceNet: A Unified Embedding for Face Recognition and Clustering"
 
-## 결론
+# 결론
 - 얼굴 감지는 인식, 감정 감지 또는 얼굴 생성을 포함한 추가 얼굴 분석을 위한 첫 번째 단계임
 - 또한 추가 처리를 위해 필요한 모든 데이터를 수집하는 것이 중요함
