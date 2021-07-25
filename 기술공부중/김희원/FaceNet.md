@@ -7,11 +7,15 @@
 >
 > 저자 : Florian Schroff, Dmitry Kalenichenko, James Philbin
 
-* 참고 : 
+* 참고 : (공부예정)
+  - https://webit22.tistory.com/22
   - https://ccss17.github.io/paper/facenet/
   - https://kau-deeperent.tistory.com/75
   - https://butter-shower.tistory.com/233
   - https://m.blog.naver.com/4u_olion/221478534498
+  - https://m.blog.naver.com/zxc1552916/221957018715
+  - https://wwiiiii.tistory.com/entry/Pairwise-Triplet-Loss
+  
 
 # Abstract
 
