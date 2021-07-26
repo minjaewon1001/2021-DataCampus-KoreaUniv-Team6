@@ -7,7 +7,7 @@
 최근 얼굴 인식 분야에서 상당한 발전에도 불구하고, 규모에 맞게 얼굴 검증과 인식을 효율적으로 구현하는 것은 현재 접근법에 심각한 문제를 제기하고 있다.
 
 * 기존의 deep networks 기반의 얼굴인식 :
-  - CNN의 [bottle-neck layer](#몰랐던,-헷갈리던-기술&용어)(중간병목층)을 취하는데, 이게 '간접적', '비효율성'이라는 단점을 내포함.
+  - CNN의 [bottle-neck layer](#몰랐던-헷갈리던-기술용어)(중간병목층)을 취하는데, 이게 '간접적', '비효율성'이라는 단점을 내포함.
   - 2D, 3D로 aligned(정렬된)된 얼굴 이미지를 필요로 함.   
 
 
@@ -153,7 +153,7 @@ Wang et al. [18] for ranking images by semantic and visual similarity.
 margin이 충분히 크지 않은 nagative를 뽑는 것이다.
 
 
-# 몰랐던, 헷갈리던 기술&용어
+# 몰랐던 헷갈리던 기술용어
 ## 1. bottle-neck layer
 CNN 에서 연산의 효율성을 높이기 위해 분석 대상의 크기를 축소하는 것을 pooling 이라고 한다.   
 이러한 pooling 작업은 feature 의 특징을 추출한 데이터의 사이즈를 줄여 연산량을 줄이고 효율성을 높이기 위한 작업이다.   
