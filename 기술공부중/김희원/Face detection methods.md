@@ -27,11 +27,14 @@
 
 ## 2. Template matching
 - 템플릿 매칭 방법은 미리 정의되거나 매개변수화된 얼굴 템플릿을 사용하여 미리 정의되거나 변형 가능한 템플릿과 입력 이미지 간의 상관 관계를 통해 얼굴을 찾거나 감지함
+- 즉, 참조 영상(reference image)에서 템플릿(template) 영상과 매칭되는 위치를 탐색하는 방법이다.
 - 엣지 검출 방법을 사용하여 엣지로 얼굴 모델을 구성할 수 있음
 
 ![image](https://user-images.githubusercontent.com/87646049/126885675-564c2add-cabe-4745-b67d-6884f482ff83.png)
+![image](https://user-images.githubusercontent.com/87646049/127001357-8ad5ce51-fc58-4750-a6bc-bfb2c294759a.png)
 
-- 변형 기술로 'controlled background technique'가 있다. 정면 얼굴사진과 배경 사진이 있다면, 얼굴 영역을 제외한 배경을 제거할 수 있다..?
+- 변형 기술로 'controlled background technique'가 있다. 정면 얼굴사진과 배경 사진이 있다면, 얼굴 영역을 제외한 배경을 제거할 수 있다.
+- Template maching은 이동(translation) 문제는 해결할 수 있는 반면, 회전 및 스케일링된 물체의 매칭은 어려운 문제이다.
 
 
 ## 3. Feature-based face detection
