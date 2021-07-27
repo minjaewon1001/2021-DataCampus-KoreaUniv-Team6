@@ -14,4 +14,4 @@ ILSVRC 2014에서 VGGNet을 제치고 1등을 차지한 GoogLeNet.
 
 1 x 1 convolution layer의 사용, depth를 늘려 모델의 성능을 개선시키는 등. VGGNet과 유사한 부분 꽤 있음.   
 
-구조이름 : Inception(인셉션)   
+구조이름 : Inception(인셉션)    
