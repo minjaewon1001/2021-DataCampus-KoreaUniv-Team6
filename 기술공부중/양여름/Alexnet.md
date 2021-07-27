@@ -1,18 +1,11 @@
 # CNN의 발전, 모델 정리 1. AlexNet
 ## 0. 개요
-2012   
+AlexNet(2012)   
 GPU, ReLU함수 사용하면서, 깊은 네트워크(8Layer) 학습하여 성능 상승(오차율 16.4%)
 
 ## 1. 동기
 고해상도 이미지에 대규모로 Convolutional Neural Network를 적용하기에는 여전히 많은 연산량 소모   
 이와 함께 적은 데이터셋 있으니, 과적합을 막아야 했다.
-
-
-
-
-
-
-
 
 ## 2. 주요 기능
 
@@ -22,8 +15,11 @@ GPU, ReLU함수 사용하면서, 깊은 네트워크(8Layer) 학습하여 성능
 
 ![image](https://user-images.githubusercontent.com/67731178/127152666-264aa79e-9720-4087-b524-f84c65850b1a.png)
 
-ReLU는 최근까지도 가장 보편적으로 쓰이는 활성화 함수입니다. AlexNet에서도 ReLU를 사용하면 tanh함수에 비해 학습 속도가 최고 6배까지 빠릅니다.
-
+ReLU는 최근까지도 가장 보편적으로 쓰이는 활성화 함수입니다. AlexNet에서도 ReLU를 사용하면 tanh함수에 비해 학습 속도가 최고 6배까지 빠릅니다.  
+연산비용이 크지 않고 구현이 매우 간단합니다. 
+> 활성화 함수란?   
+> 신경망 회로에서, 한 노드에 대해 입력값을 다음 노드에 보낼지 말지에 대해 결정하는 함수이다. 선형함수를 사용할 시 층을 깊게 하는 의미가 줄어들어 주로 비선형 함수로 되어있다.   
+> 참고자료 : https://m.blog.naver.com/good5229/221752705030
 
 #### 2개의 GPU 사용
 GPU 여러 개를 사용한 병렬처리 기법으로 학습시간을 획기적으로 줄였습니다.
@@ -36,12 +32,16 @@ GPU 여러 개를 사용한 병렬처리 기법으로 학습시간을 획기적�
 동일한 이미지들을 조금씩 변형시켜가며 학습하면 Overfitting을 방지하는 데 도움이 됩니다. 
 Data Augmentation에는 이미지를 좌우 반전시키는 Mirroring 기법, 이미지의 특정 부분을 무작위로 자르는 Random Crops 기법, RGB채널을 임의로 바꾸는 PCA Color Augmentation 기법 등이 있습니다. 
 AlexNet을 만든 연구원들은 이러한 방법을 사용하여 데이터 양을 2048배로 늘렸습니다
+
 #### Dropout
 6, 7층(Fully-Connected)에서 50% 확률의 Dropout을 적용했습니다. 이는 신경망 사이의 연결을 랜덤으로 끊음으로서 Overfitting을 줄여줍니다.   
 Dropout이 비록 학습시간을 약 2배 가량 증가시키지만, 이 기법이 없으면 Overfitting이 늘어나 에러 확률이 높아집니다.
+
 ### 2.3 정확도 상승
 #### Overlapping Pooling Layer
+![image](https://user-images.githubusercontent.com/67731178/127153390-7d417490-f329-45e3-b860-8646e2121c31.png)
 
+다른 CNN 모델에서 Pooling은 일반적으로 필터를 겹치지 않게 Stride를 적절히 조정하여 사용합니다. 그러나 AlexNet에서는 Stride를 좁혀 Overlapping 하는 구조를 만들었습니다. 이 경우, 정확도는 약 0.4%가 향상되지만 Overlapping의 사용은 연상량을 증가시켰습니다.
 #### Local Response Normalization(LRN) 사용
 ![image](https://user-images.githubusercontent.com/67731178/127152788-955b4e9b-0af7-4187-ab15-f3ea12d11565.png)
 
@@ -78,4 +78,4 @@ AlexNet에서 사용된 기법들은 지금은 비교적 보편화되었으나 2
 
 발전과제 : AlexNet에서의 최적의 hyper-parameter의 조합을 찾아 성능 높여만 함.
 
-참고자료:
+참고자료: https://www.datamaker.io/posts/34/ , https://warm-uk.tistory.com/44
