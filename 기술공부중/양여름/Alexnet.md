@@ -1,5 +1,7 @@
 # CNN의 발전, 모델 정리 1. AlexNet
 ## 0. 개요
+![image](https://user-images.githubusercontent.com/67731178/127153824-f0f9f484-876d-4181-9ccf-d531f61e438b.png)
+
 AlexNet(2012)   
 GPU, ReLU함수 사용하면서, 깊은 네트워크(8Layer) 학습하여 성능 상승(오차율 16.4%)
 
@@ -7,7 +9,7 @@ GPU, ReLU함수 사용하면서, 깊은 네트워크(8Layer) 학습하여 성능
 고해상도 이미지에 대규모로 Convolutional Neural Network를 적용하기에는 여전히 많은 연산량 소모   
 이와 함께 적은 데이터셋 있으니, 과적합을 막아야 했다.
 
-## 2. 주요 기능
+## 2. 핵심 아이디어
 
 ### 2.1 학습 최적화
 
@@ -79,3 +81,70 @@ AlexNet에서 사용된 기법들은 지금은 비교적 보편화되었으나 2
 발전과제 : AlexNet에서의 최적의 hyper-parameter의 조합을 찾아 성능 높여만 함.
 
 참고자료: https://www.datamaker.io/posts/34/ , https://warm-uk.tistory.com/44
+
+***
+
+# CNN의 발전, 모델 정리 2. VGGNet
+## 0. 개요
+![image](https://user-images.githubusercontent.com/67731178/127153824-f0f9f484-876d-4181-9ccf-d531f61e438b.png)
+VGGNet은 옥스포드 대학의 연구팀에 의해 개발된 모델로써, 2014년 ILSVRC에서 준우승한 모델입니다. 이 모델은 이전에 혁신적으로 평가받던 AlexNet이 나온지 2년만에 다시 한 번 오차율 면에서 큰 발전을 보여줬습니다.
+
+위 그림은 2010년부터 2015년까지 ILSVRC에서 CNN 모델들이 보여준 오차율과 층(layer)의 깊이를 나타냅니다. VGG가 등장한 2014년에는 그 전 모델보다 층의 깊이가 확연히 증가했다는 특징이 있습니다. 심지어 15년 모델은 152개 층을 가졌는데, 이를 통해 CNN의 층이 깊어질 수록 성능이 좋아진다는 것을 추론할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/67731178/127154423-d0b56fae-2369-4d5a-af1d-87fdd67adbcb.png)
+
+## 1. 동기 (기존의 문제)
+
+더 깊은 네트워크를 형성하기 위해, 단순하고 작은 필터 크기를 적용해야만 했다.
+
+그래야 파라미터 수가 즐어들고 학습속도 향상된다.
+
+(하지만 16layer를 넘어가면 별 이득이 없음.)
+
+​
+
+## 2. 핵심 아이디어
+
+1) 단순한 네트워크 구조
+
+-> 모든 convolution layer에 "3x3 (stride 1, pad 1)" 필터 적용
+
+-> 모든 pooling layer에 "2x2 (stride 2)" 적용
+
+​
+
+2) 높이, 너비는 작아지는데, 필터는 2배로 계속 규칙적 상승 => 비율 체계적
+
+​
+
+3) 기울기 소실 문제 해결
+
+먼저 11-layer의 비교적 간단한 구조-A를 학습시킨 후,
+
+더 깊은 나머지 구조(16-layer)를 학습할 때는 처음 4 layer와 마지막 fully-connected layer의 경우는 구조-A의 학습 결과로 초기값을 설정한 후 학습
+
+​
+
+## 3.모델 설명
+
+파라미터 : 1억 3800만개
+
+​
+
+convolution layer : 13개​
+
+pooling layer : 5개
+
+fully-connected layer : 3개
+
+총 layer : 16개
+
+​
+
+- 모델 단점
+
+파라미터 개수가 너무 많다.
+
+특히 fully-connected layer에서의 파라미터는 너무 많다.
+
+해결책 : Avg pooling layer 사용 <- GoogleNet에서 적용
