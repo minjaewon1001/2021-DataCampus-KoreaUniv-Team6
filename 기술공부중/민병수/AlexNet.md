@@ -41,7 +41,7 @@ AlexNet은 8개의 레이어로 구성되어 있다. 5개의 컨볼루션 레이
 
 - 또한 세 번째 층은 예외적으로 이전 단계의 층으로부터 학습된 모든 필터들을 가져오는데, 이러한 알고리즘은 아마 병렬 학습으로 인해 각각의 필터들의 연관성이 크게 벗어나는 것을 방지하기 위한 것으로 보입니다.
 
-![image](https://user-images.githubusercontent.com/77095328/127149472-a02e8a7e-0bdb-4359-b834-f1fee7c05767.png)
+
 ![image](https://user-images.githubusercontent.com/77095328/127149480-8ec7016b-f239-4f00-b4f7-8a18ecbd5ea1.png)
 
 1) Overlapping Pooling Layer: 다른 CNN 모델에서 Pooling은 일반적으로 필터를 겹치지 않게 Stride를 적절히 조정하여 사용합니다. 그러나 AlexNet에서는 Stride를 좁혀 Overlapping 하는 구조를 만들었습니다. 이 경우, 정확도는 약 0.4%가 향상되지만 Overlapping의 사용은 연상량을 증가시켰습니다.
