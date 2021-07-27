@@ -7,7 +7,7 @@
 최근 얼굴 인식 분야에서 상당한 발전에도 불구하고, 규모에 맞게 얼굴 검증과 인식을 효율적으로 구현하는 것은 현재 접근법에 심각한 문제를 제기하고 있다.
 
 * 기존의 deep networks 기반의 얼굴인식 :
-  - CNN의 [bottle-neck layer](##1.-bottle-neck-layer)(중간병목층)을 취하는데, 이게 '간접적', '비효율성'이라는 단점을 내포함.
+  - CNN의 bottle-neck layer(중간병목층)을 취하는데, 이게 '간접적', '비효율성'이라는 단점을 내포함.
   - 2D, 3D로 aligned(정렬된)된 얼굴 이미지를 필요로 함.   
 
 
@@ -48,59 +48,21 @@
          2) 인터리브는 성능을 높이기 위해 데이터가 서로 인접하지 않도록 배열하는 방법이다.
          3) 정확히 설명은 못하겠지만… 일단 인터리브 CNN은 여러 layer 유형을 계층별로 ‘직렬’로 적용하는 네트워크이고,
          4) 이에 비해 “inception(인셉션)”유형 CNN에서는 여러 layer 유형을 병렬로 적용하는거라카네..
-         5) https://datascience.stackexchange.com/questions/15214/what-are-interleaved-layers-of-convolutions
+         5) [참고링크](https://datascience.stackexchange.com/questions/15214/what-are-interleaved-layers-of-convolutions)
 
   - non-linear activations(비선형 활성화)
-    * https://subinium.github.io/introduction-to-activation/
+    * [참고링크](https://subinium.github.io/introduction-to-activation/)
 
   - local response normalizations(로컬 응답 정규화)
-    * https://neurowhai.tistory.com/134
+    * [참고링크](https://neurowhai.tistory.com/134)
 
   - max pooling layers(최대 layer들 모으기)
-    * https://hobinjeong.medium.com/cnn%EC%97%90%EC%84%9C-pooling%EC%9D%B4%EB%9E%80-c4e01aa83c83
+    * [참고링크](https://hobinjeong.medium.com/cnn%EC%97%90%EC%84%9C-pooling%EC%9D%B4%EB%9E%80-c4e01aa83c83)
 
 
 * 두 번째 architecture, Szegdy 등의 Inception 모델
 최근 ImageNet 2014의 성공적 접근법으로 사용되었던 Szegdy 등의 Inception 모델을 기반으로 합니다[16].
 >> 이 부분 너무 광범위해서.. section2. 관련 문헌 part는 따로 빼서 기술하려함. 조금만 참아주세용 :)   
-
-
-이러한 networks는 여러 개의 서로 다른 convolution과 pooling layers를 병렬로 실행하고 응답하는 concatenate(연결하는) 혼합 layers를 사용합니다.
-이러한 모델은 파라미터 수를 최대 20배까지 줄일 수 있으며, 유사한 성능에 필요한 FLOPS 수를 줄일 수 있다는 것을 발견했습니다.
--	FLOPS란?
-컴퓨터의 성능을 수치로 나타낼 때 주로 사용되는 단위.
-https://ko.wikipedia.org/wiki/%ED%94%8C%EB%A1%AD%EC%8A%A4
-그건 face verification(검증)과 recognition(인식)작업의 방대한 Corpus(코퍼스, 언어 데이터를 한데 모아둔 것)이다.
-Review하는 것은 본 논문의 범위를 벗어나므로 가장 관련성이 높은 최근 작업에 대해서만 간략히 논의하겠습니다.
-그 [15,17,23]의 모든 작업은 복잡한 시스템을 사용합니다. 차원 감소를 위한 PCA 및 classification(분류)를 위한 SVM과 deep convolutional network의 output(출력)을 결합한 다단계 네트워크입니다.
-
-Zhenyao et al.(젠야오 외~.)[23] deepnetwork를 사용하여 얼굴을 표준 정면 view로 “왜곡”한 다음, 각 얼굴을 알려진 identity에 속하는 것으로 분류하는 CNN을 학습합니다.
-
-얼굴 확인을 위해 SVM ensemble(앙상블)과 함께 네트워크 출력의 PCA가 사용됩니다.
-
-Taigman et al.(다이그먼 외~.)[17]은 얼굴을 일반 3D 형상 model에 정렬하는 다단계 접근방식을 제안합니다.
-멀티-클래스 네트워크는 4000개 이상의 identities에서 얼굴 인식 작업을 수행하도록 교육됩니다.
-저자들은 또한 두 얼굴 features사이의 L1 거리를 직접 최적화 하는 이른바 ‘Siamese network(샴 네트워크)”를 실험했습니다.
-LFW에서 가장 우수한 성능(97.35%)은 서로 다른 정렬과 색상 채널을 사용하는 3개 네트워크의 앙상블에서 비롯됐습니다.
-이러한 네트워크의 예측거리는 비선형 SVM을 사용하여 결합됩니다.( 2커널에 기반한 비선형 SVM 예측)
-
-Sun et al.[14, 15]는 compact(작음)하므로 상대적으로 계산 네트워크 비용이 저렴하다고 제안합니다.
-그들은 25개의 네트워크 앙상블을 사용하며, 각 네트워크마다 다른 face patch(부분)로 작동합니다. LFW에 대한 최종 성능(99.47%[15])을 위해 저자들은 50개의 reponses(정규반응과 플립반응, regular and flipped)을 결합합니다.
-
-Both PCA and a Joint Bayesian model [2] that effectively correspond to a linear transform in the embedding space are employed.
-
-Their method does not require explicit 2D/3D alignment.
-
-The networks are trained by using a combination of classification and verification loss.
-
-The verification loss is similar to the triplet loss we employ [12, 19], in that it minimizes the L2-distance between faces of the same identity and enforces a margin between the distance of faces of different identities.
-
-
-The main difference is that only pairs of
-images are compared, whereas the triplet loss encourages a relative distance constraint.
-
-A similar loss to the one used here was explored in
-Wang et al. [18] for ranking images by semantic and visual similarity.
 
 
 ## 3. Method
@@ -160,10 +122,18 @@ CNN 에서 연산의 효율성을 높이기 위해 분석 대상의 크기를 �
 그러나 분석의 대상이 3차원 데이터라면 해당 feature는 Channel 값을 갖게 된다.   
 Channel 값이 많아지는 경우 연산에 걸리는 속도도 그만큼 증가할 수 밖에 없는데, 이때 Channel 의 차원을 축소하는 개념이 Bottleneck layer 이다.   
 
-***
+## 2. [pooling](https://hobinjeong.medium.com/cnn%EC%97%90%EC%84%9C-pooling%EC%9D%B4%EB%9E%80-c4e01aa83c83)   
+Convolution을 거쳐서 나온 activation map이 있을 때,   
+이를 이루는 convolution layer를 resizing하여 새로운 layer를 얻는것.   
 
+![image](https://user-images.githubusercontent.com/87224039/126981001-4d88589c-9cc7-4609-a973-ccf6df8befb8.png)   
 
+* max pooling = 최댓값을 뽑아낸다.   
+![image](https://user-images.githubusercontent.com/87224039/126981192-caeca8a5-d77c-46f6-91d7-745ac0fc6594.png)   
 
+* mean pooling = 평균값을 뽑아낸다.
+
+## 3. LMNN
 
 
 
