@@ -16,12 +16,12 @@ SENet은 채널간의 상호작용에 집중하여 성능을 끌어올린 모델
 SENet은 SE Block을 활용하는 모델입니다. SE Block은 CNN 기반 모델에 부착하여 사용합니다. residual 모델 또는 Inception 모델과 함께 사용할 수 있습니다. 또한 VGGnet에도 부착하여 사용할 수 있습니다. 이처럼 SE Block은 유연성을 지니고 있습니다. 재밌는 점은 low-level에서 SE Block은 클래스 상관없이 중요한 특징을 추출하고, High-level에서는 클래스와 관련있는 특징들을 추출한다네요.
 
 
- SE Block을 살펴보겠습니다. SE Block은 Squeeze(압축), Excitation(재조정) 두 과정으로 구성됩니다. 
+ ## SE Block을 살펴보겠습니다. SE Block은 Squeeze(압축), Excitation(재조정) 두 과정으로 구성됩니다. 
  
  ![image](https://user-images.githubusercontent.com/77095328/127130913-482b0e26-9aa0-4163-93c9-f4b3ce4c29e7.png)
 
 
-(1) Squeeze(압축)
+##### (1) Squeeze(압축)
  각 채널별 가중치를 계산하기 위해서는 우선, 각 채널을 1차원으로 만들어야 합니다. 예를 들어, 3채널이 있으면 [0.6, 0.1, 0.7]로 표기를 해야 가중치를 나타낼 수 있습니다. Squeeze는 각 채널을 1차원으로 만드는 역할(압축)을 합니다. 
  
  ![image](https://user-images.githubusercontent.com/77095328/127134192-3d9e81f6-f373-4a08-9056-828422a79e96.png)
@@ -32,7 +32,7 @@ SENet은 SE Block을 활용하는 모델입니다. SE Block은 CNN 기반 모델
 
 C개 채널의 2차원(HxW)의 특성맵들을 1x1 사이즈의 특성맵으로 변환해주는 것입니다. 간단히 global average pooling (GAP)을 통해 각 2차원의 특성맵을 평균내어 하나의 값을 얻습니다.
 
-(2) Excitation(재조정)
+##### (2) Excitation(재조정)
   Excitation은 Squeeze에서 생성된 (1x1xC)벡터를 정규화하여 가중치를 부여하는 역할을 합니다.
 
  Excitation은 **FC1 - ReLU - FC2 - Sigmoid**로 구성됩니다. FC1에 (1x1xC)백터가 입력되어, C 채널을 C/r개 채널로 축소합니다. r은 하이퍼파라미터 입니다. 연산량 제한과 일반화효과 떄문에 **bottleneck 구조를 선택**했다. C/r개 채널로 축소되어 (1x1xC/r)가 된 벡터는 ReLU로 전달되고, FC2를 통과합니다. FC2는 채널 수를 다시 C로 되돌립니다. 그리고 Sigmoid를 거쳐서 [0에서1) 범위의 값을 지니게 됩니다. 마지막으로, 피쳐맵과 곱해져 피쳐맵의 채널에 가중치를 가합니다. 
@@ -43,7 +43,7 @@ C개 채널의 2차원(HxW)의 특성맵들을 1x1 사이즈의 특성맵으로 
 
 SENet은 ResNext-5-에 부착되어 만들어짐, 즉 ResNext기반 모델
 
-기존 모델과의 성능 분석
+## 기존 모델과의 성능 분석
 ![image](https://user-images.githubusercontent.com/77095328/127141045-6850773c-8ea4-4acb-b013-7919a39b04a0.png)
 
 위 표에서 original은 original 논문에서 얻은 결과를, re-implementation은 저자들이 직접 실험해서 얻은 결과를, SENet은 SE block을 첨가해서 얻은 결과를 각각 나타냅니다. 이 표를 통해 알 수 있는 것은 SE block을 첨가했을 때 항상 top-1 error와 top-5 error를 낮췄다는 것입니다. 그리고 알고리즘의 복잡도는 크게 증가하지 않았다는 것도 GFLOPs 열에서 알 수 있습니다. 
