@@ -93,6 +93,7 @@ VGGNet은 옥스포드 대학의 연구팀에 의해 개발된 모델로써, 201
 위 그림은 2010년부터 2015년까지 ILSVRC에서 CNN 모델들이 보여준 오차율과 층(layer)의 깊이를 나타냅니다. VGG가 등장한 2014년에는 그 전 모델보다 층의 깊이가 확연히 증가했다는 특징이 있습니다. 심지어 15년 모델은 152개 층을 가졌는데, 이를 통해 CNN의 층이 깊어질 수록 성능이 좋아진다는 것을 추론할 수 있습니다.
 ![image](https://user-images.githubusercontent.com/67731178/127158915-2f340d7a-dd46-4b3d-8f87-c8171da16286.png)
 
+> 논문 : https://arxiv.org/pdf/1409.1556v6.pdf   
 > 논문 요약
 > * ILSVRC 2014 대회에서 2등을 차지한, Karen Simonyan과 Andrew Zisserman이 만든 CNN 모델
 > * VGGNet은 네트워크의 깊이가 모델이 좋은 성능을 보이는 데 중요한 역할을 한다는 것을 보여줌
@@ -148,15 +149,8 @@ Convolutional Network 구조를 학습할 때, 학습 대상인 가중치(weight
 
 하지만, FC(Fully Connected) 레이어가 세 개이기 때문에, 파라미터가 너무 많아진다. (파라미터 수 약 1억2200만) 역전파(back propagation)를 할 때 Conv 레이어의 중간 결과를 저장하기 때문에 많은 메모리 공간을 차지한다는 단점이 있다. 
 
-### 2.2 높이, 너비는 작아지는데, 필터는 2배로 계속 규칙적 상승 => 비율 체계적
 
-
-### 2.3 기울기 소실 문제 해결
-
-먼저 11-layer의 비교적 간단한 구조-A를 학습시킨 후,
-
-더 깊은 나머지 구조(16-layer)를 학습할 때는 처음 4 layer와 마지막 fully-connected layer의 경우는 구조-A의 학습 결과로 초기값을 설정한 후 학습
-
+> VGGNet 팀은 3x3 convolution이라는 단순한 구조로부터 성능을 끌어내기 위해, training과 test에 많은 공을 들였으며, 다양한 경우에 성능이 어떻게 달라지는지 공개하여 CNN 구조 이해에 많은 기여를 하였다. 논문 3번 Classification framework 부분인데 논문을 더 자세히 읽으면서 공부하면 큰 도움이 될 듯 하다. (hyper-parameter 설정, traning image size, test image size 등)
 
 ## 3.모델 설명
 
