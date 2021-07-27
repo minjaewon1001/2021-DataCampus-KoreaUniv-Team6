@@ -67,6 +67,7 @@ fully-connected layer : 3개
 총 layer : 8개
 
 ![image](https://user-images.githubusercontent.com/67731178/127152328-b8a6ab36-d709-4e54-aa65-7521f26fa55b.png)
+
 AlexNet은 총 8개의 층으로 구성되어 있습니다. 첫 5개 층은 Convolution, 그 뒤 3개 층은 Fully-Connected 층입니다. 각각의 층들은 하나의 이미지에 대해 독립적으로 특징을 추출하여(Feature Extraction) 가중치를 조정함으로써 필터를 학습시킵니다. 층별로 어떤 역할을 하는지 살펴보겠습니다.
 
 - 1~2층은 Max Pooling 층입니다. 이를 통해 데이터의 중요한 요소들만 요약하여 추출합니다.
