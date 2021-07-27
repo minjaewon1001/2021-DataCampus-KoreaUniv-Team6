@@ -41,3 +41,5 @@ SENet은 Squeeze-and-Excitation Block이라는 기법을 사용하는데,
 파라미터와 연산량이 증가하지만, 핵심이 되는 Squeeze-and-Excitation Blocks를 붙이는데는 모델의 제약이 따로 없고,   
 
 증가한 비용에 비해서 성능 향상의 효율이 좋다고 함.   
+
+참고사이트 : https://wiserloner.tistory.com/1241
