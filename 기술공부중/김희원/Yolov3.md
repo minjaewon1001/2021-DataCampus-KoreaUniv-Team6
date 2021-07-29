@@ -24,6 +24,7 @@ kaggle api 다운받는 법 : https://teddylee777.github.io/kaggle/Kaggle-API-%E
 
 #### 4) Augmentation
 > https://nittaku.tistory.com/272
+> https://deepbaksuvision.github.io/Modu_ObjectDetection/posts/03_04_augmentation.html
 
 - 이미지를 부풀려서 성능을 더 좋게 만듬
 - VGG 모델에서 많이 사용하고 벤치마킹함
@@ -43,5 +44,44 @@ kaggle api 다운받는 법 : https://teddylee777.github.io/kaggle/Kaggle-API-%E
 > 
 > https://jeongwookie.github.io/2020/03/24/200324-pytorch-cuda-gpu-allocate/
 
+#### 2) 커스텀 데이터셋 (Custom dataset)
 
-#### 
+> https://sanghyu.tistory.com/90
+> https://wikidocs.net/57165
+
+- Dataset을 상속받아 다음 메소드들을 오버라이드 하여 커스텀 데이터셋을 구축함
+
+Custom dataset / dataloader 가 왜 필요한가?
+- 데이터를 한번에 다 부르지 않고 하나씩만 불러서 쓰는 방식이 필요함
+ 
+Dataset class
+- 전체 dataset을 구성하는 단계
+- input으로는 전체 x(input feature)과 y(label)을 tensor로 넣어주면 됨
+
+Dataset 구성
+- __init__(self): 데이터셋의 전처리를 해주는 부분
+- __get_item__(self, index): 데이터셋에서 특정 1개의 샘플을 가져오는 함수
+- __len__(self): 데이터셋의 길이. 즉, 총 샘플의 수를 적어주는 부분
+
+
+![image](https://user-images.githubusercontent.com/87646049/127500894-1e83a23d-8e59-491e-8b16-4a685d4952d2.png)
+
+
+
+## YOLO 에서 mAP와 FLS란?
+> https://mickael-k.tistory.com/143
+
+![image](https://user-images.githubusercontent.com/87646049/127490485-dc4dea0f-fd4c-4f2e-901e-c42faf0df08c.png)
+
+#### FPS (Frame Per Second)
+1초당 몇 이미지 Frame이 우리에게 보여지는지를 의미함
+
+![image](https://user-images.githubusercontent.com/87646049/127490688-924543f3-65b6-45c5-9cc7-3c1c07b2432f.png)
+
+#### mAP (Mean Average Precision)
+AP의 평균
+
+그렇다면 AP란?
+- 물체 인식 분야의 알고리즘 성능을 평가하는 지표
+> https://light-tree.tistory.com/124
+
