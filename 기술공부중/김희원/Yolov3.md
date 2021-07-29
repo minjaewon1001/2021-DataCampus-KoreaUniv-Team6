@@ -84,4 +84,7 @@ AP의 평균
 그렇다면 AP란?
 - 물체 인식 분야의 알고리즘 성능을 평가하는 지표
 > https://light-tree.tistory.com/124
+> recall : 물체 검출율
+> precision : 인식된(혹은 검출된) 객체에 대한 분류(classification)의 정확
+
 
