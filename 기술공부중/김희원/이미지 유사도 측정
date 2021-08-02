@@ -52,5 +52,3 @@ for i, img in enumerate(delete_img) :
     plt.title(file_list[i])
     plt.axis('꺼짐')
     plt.imshow(img[:,:,::-1])
-
-![image](https://user-images.githubusercontent.com/87646049/127892183-06b0c8f4-fdf5-4ede-ae50-c466f7ef2600.png)
