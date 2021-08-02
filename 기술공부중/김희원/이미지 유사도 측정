@@ -1,0 +1,54 @@
+# https://bkshin.tistory.com/entry/OpenCV-12-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%9C%A0%EC%82%AC%EB%8F%84-%EB%B9%84%EA%B5%90-%EC%82%AC%EB%9E%8C-%EC%96%BC%EA%B5%B4%EA%B3%BC-%ED%95%B4%EA%B3%A8-%ED%95%A9%EC%84%B1-%EB%AA%A8%EC%85%98-%EA%B0%90%EC%A7%80-CCTV
+
+x = int(input('몇번째 사진을 검수하시겠습니까? : '))
+cor = float(input('상관관계 기준 : '))
+
+# 히스토그램 비교 (histo_compare.py)
+
+import cv2, numpy as np
+import matplotlib.pylab as plt
+import os
+
+path_dir = 'C:/Users/Administrator/Desktop/datacampus/data/croped_junho'
+file_list = os.listdir(path_dir)
+file_len = len(file_list)
+
+a = file_len
+imgs = []
+for _ in range(0, a):
+    img_data = cv2.imread(path_dir+'/'+file_list[_])
+    globals()['img{}'.format(_)] = img_data
+    imgs.append(img_data)
+
+hists = []
+for i, img in enumerate(imgs) :
+    #---① 각 이미지를 HSV로 변환
+    hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
+    #---② H,S 채널에 대한 히스토그램 계산
+    hist = cv2.calcHist([hsv], [0,1], None, [180,256], [0,180,0, 256])
+    #---③ 0~1로 정규화
+    cv2.normalize(hist, hist, 0, 1, cv2.NORM_MINMAX)
+    hists.append(hist)
+
+query = hists[x]
+delete_num = []
+methods = {'CORREL' :cv2.HISTCMP_CORREL}
+for j, (name, flag) in enumerate(methods.items()):
+    print('%-10s'%name, end='\t')   # 표 만들기
+    for i, (hist, img) in enumerate(zip(hists, imgs)):
+        #---④ 각 메서드에 따라 img1과 각 이미지의 히스토그램 비교
+        ret = cv2.compareHist(query, hist, flag)
+        if flag == cv2.HISTCMP_INTERSECT: #교차 분석인 경우 
+            ret = ret/np.sum(query)        #비교대상으로 나누어 1로 정규화
+        if ret >= cor:
+            print("%s:%7.2f"% (file_list[i] , ret), end='\n')
+            delete_num.append(i)
+    print()
+plt.show()
+
+delete_img = [imgs[_] for _ in delete_num]
+for i, img in enumerate(delete_img) :
+    plt.subplot(1,len(delete_img),i+1)
+    plt.title(file_list[i])
+    plt.axis('off')
+    plt.imshow(img[:,:,::-1])
