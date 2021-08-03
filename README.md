@@ -36,14 +36,16 @@
 * Haar-cascasde, HoG는 고전방법.
 * SSD는 가장 빠름.
 
-### openCV - Haar-cascasde detection, SSD(Single Shot multibox Detector)
+### openCV 
+#### Haar-cascasde detection, SSD(Single Shot multibox Detector)
 	>장점 : 인식속도가 가장 빨라 일반적인 PC환경에서도 실시간인식가능
 	>단점 : 정면 얼굴이 아닌 경우, 인식률 많이 떨어짐
 		오탐(False Positive)도 종종 발생하는 단점.
 
 	>개선방안 : Eye detection을 추가하면 처리속도는 좀 느려지지만, 오탐은 많이 줄어든다.
 
-### dlib - HoG(Histogram of Oriented Gradient), MMOD(Max-Margin Object Detection)
+### dlib
+#### HoG(Histogram of Oriented Gradient), MMOD(Max-Margin Object Detection)
 	>장점 : 높은 인식률
 	>단점 : 인식속도 느려서 실시간 인식이 어렵고 GPU와 같은 Special HW가 요구됨. 얼굴을 모두 인식하지는 못함.
 
