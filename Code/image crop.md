@@ -82,3 +82,4 @@ for i in file_list:
 #print(imgDetector(img,cascade))
 #img[imgDetector[1]:imgDetector[3], imgDetector[0]:imgDetector[3]]
 ```
+그러나 이 경우에는 얼굴의 정면만 인식할 수 있고 옆모습은 잘 인식하지 못한다. 또한 100개중에 49개정도만 추출된걸로 보면 성능이 좋은 편은 아닌 거 같다...
