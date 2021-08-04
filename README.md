@@ -51,3 +51,9 @@
 
 
 ### Vision API
+
+### yolo (yoloface)
+> 2021.08.04
+딥러닝을 이용한 object detection으로 성능이 좋고 속도가 빠르다.   
+얼굴을 인식할 수 있도록 미리 학습시킨 가중치가 존재(yoloface)하여 이를 이용하여 얼굴을 감지하기로 하였다.   
+yoloface.py를 우리가 쓸 시스템에 맞게 수정하였고 이는 code의 yoloface.md를 참고.
