@@ -1,6 +1,7 @@
 # 2021-DataCampus-KoreaUniv-Team6
 
 ## K X-ray 프로젝트 (안면 인식 + 영상 속 인물 정보 제공 시스템)
+![구조](https://user-images.githubusercontent.com/87637394/128809121-99388329-1575-4bc1-8ea0-1eaa0c8ada4b.JPG)
 ---
 ---
 ## 진행상황
