@@ -6,6 +6,7 @@
 사용 가능한 두 wrapper는 TimeDistributed 및 Bidirectional 가 있다.
 
 [tensorflow 공식 문서]https://www.tensorflow.org/api_docs/python/tf/keras/layers/Wrapper
+
 ##### [tensorflow.keras.layers.TimeDistributed] What is it?
 순차적으로 들어오는 모든 입력에 대해 레이어에 적용할 수 있게 함.\
 입력은 적어도 3차원 이상을 요구하며, 첫 번째 입력의 1차원에 해당하는 값은 시간을 의미한다. \
@@ -22,6 +23,7 @@ outputs.shape
 TimeDistributed 는 각 timestemp에 동일한 Conv2D 인스턴스를 적용 하기 때문에 각 timestemp에서 동일한 가중치 집합이 사용됩니다.
 
 [tensorflow 공식 문서]https://www.tensorflow.org/api_docs/python/tf/keras/layers/TimeDistributed
+
 ##### [tensorflow.keras.layers.Bidirectional] What is it?
 RNN에 사용되는 양방향 wrapper이다.
 >tf.keras.layers.Bidirectional(\
@@ -42,6 +44,7 @@ merge_mode -> RNN 레이어의 forward 와 backward 의 출력 값을 어떻게 
 backward_layer -> backwards의 인풋값을 조정하기 위해 사용되는 값으로, RNN 혹은 layer에서 사용됨.
 
 [tensorflow 공식 문서] https://www.tensorflow.org/api_docs/python/tf/keras/layers/Bidirectional
+
 ##### [tensorflow.keras.layers.Conv2D] what is it?
 >tf.keras.layers.Conv2D(\
     filters, kernel_size, strides=(1, 1), padding='valid',\
