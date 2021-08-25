@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Who is he/she?</title>
+    </head>
+    <body>
+        <!--
+        <img src="캡쳐한사진경로어디여">
+        -->
+        <h1> 
+            <p><span style="background: linear-gradient(to right, #ffa7a3, #5673bd); padding: 0.43em 1em; font-size: 19px; border-radius: 3px; color: #ffffff;">Who is he/she?</span></p>
+        </h1>
+        
+        <%for (var cnt=0;cnt<data.length;cnt++) { %>
+            <div id="profile">
+                <ol>
+                    <p style="border: 5px solid #C9C9C9; padding: 0.3em 1em;border-radius: 2px;">이    름 : <%=data[cnt][0].name%><%=cnt%></p>
+                    <p style="border: 5px solid #C9C9C9; padding: 0.3em 1em;border-radius: 2px;">생년월일 : <%=data[cnt][0].birthday%></p>
+                    <p style="border: 5px solid #C9C9C9; padding: 0.3em 1em;border-radius: 2px;">신    장 : <%=data[cnt][0].height%>cm</p>
+                    <p style="border: 5px solid #C9C9C9; padding: 0.3em 1em;border-radius: 2px;">소속그룹 : <%=data[cnt][0].unit%></p>
+                    <p style="border: 5px solid #C9C9C9; padding: 0.3em 1em;border-radius: 2px;">최신뉴스 : <%=data[cnt][0].news%></p>
+                </ol>
+            </div>
+        
+            <p><%=data[cnt][0].wiki%></p>
+        <% } %>
+    </body>
+
+</html>
