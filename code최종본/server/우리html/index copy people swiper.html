@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Get Information of K-Pop Celebrities</title>
+		<meta name="description" content="A triple view diagonal slideshow with content preview.">
+		<meta name="keywords" content="">
+		<meta name="author" content="Codrops">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+			<symbol id="icon-longarrow" viewBox="0 0 54 24">
+				<title>longarrow</title>
+				<path d="M.42 11.158L12.38.256c.333-.27.696-.322 1.09-.155.395.166.593.467.593.903v6.977h38.87c.29 0 .53.093.716.28.187.187.28.426.28.716v5.98c0 .29-.093.53-.28.716a.971.971 0 0 1-.716.28h-38.87v6.977c0 .416-.199.717-.592.903-.395.167-.759.104-1.09-.186L.42 12.62a1.018 1.018 0 0 1 0-1.462z" />
+			</symbol>
+			<symbol id="icon-navarrow" viewBox="0 0 408 408">
+				<title>navarrow</title>
+				<polygon fill="#fff" fill-rule="nonzero" points="204 0 168.3 35.7 311.1 178.5 0 178.5 0 229.5 311.1 229.5 168.3 372.3 204 408 408 204"></polygon>
+			</symbol>
+		</svg>
+		<main>
+			<div class="frame">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title">Get Information of K-Pop Celebrities for one click</h1>
+					<div class="codrops-links">
+						<a class="github" href="https://github.com/minjaewon1001/2021-DataCampus-KoreaUniv-Team6">Us GitHub</a>
+						<a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/SlideOutBoxMenu/" title="Previous Demo">
+							<svg class="icon icon--arrow">
+								<use xlink:href="#icon-arrow"></use>
+							</svg>
+						</a>
+						<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=35765" title="Back to the article">
+							<svg class="icon icon--drop">
+								<use xlink:href="#icon-drop"></use>
+							</svg>
+						</a>
+					</div>
+				</header>
+			</div>
+			<div class="slideshow", id="profile">
+				<div class="slideshow__deco"></div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/blackpink_gray.jpeg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">1</span>
+						<h3 class="slide__title">제니 | Jenny</h3>
+						<h4 class="slide__subtitle">블랙핑크 | BLACKPINK</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/blackpink_gray.jpeg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">2</span>
+						<h3 class="slide__title">지수 | Jisu</h3>
+						<h4 class="slide__subtitle">블랙핑크 | BLACKPINK</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/blackpink_gray.jpeg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">3</span>
+						<h3 class="slide__title">로제 | Rose</h3>
+						<h4 class="slide__subtitle">블랙핑크 | BLACKPINK</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/blackpink_gray.jpeg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">리사 | Lisa</h3>
+						<h4 class="slide__subtitle">블랙핑크 | BLACKPINK</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">RM | RapMonster</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">6</span>
+						<h3 class="slide__title">진 | Jin</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">7</span>
+						<h3 class="slide__title">슈가 | Suga</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">8</span>
+						<h3 class="slide__title">제이홉 | J-Hope</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">9</span>
+						<h3 class="slide__title">지민 | Jimin</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">10</span>
+						<h3 class="slide__title">뷔 | V</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/BTS_gray.jpg);" id = "BTS"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">11</span>
+						<h3 class="slide__title">정국 | Jungkook</h3>
+						<h4 class="slide__subtitle">방탄소년단 | BTS</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">지효 | Jihyo</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">나연 | Nayeon</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">정연 | Jeongyeon</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side",style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">모모 | Momo</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">사나 | Sana</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">미나 | Mina</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">다현 | Dahyun</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">채영 | Chaeyoung</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">12</span>
+						<h3 class="slide__title">쯔위 | Tzuyu</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/aespa_gray.png);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">카리나 | Karina</h3>
+						<h4 class="slide__subtitle">에스파 | æspa</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/aespa_gray.png);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">닝닝 | Níngníng</h3>
+						<h4 class="slide__subtitle">에스파 | æspa</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/aespa_gray.png);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">윈터 | Winter</h3>
+						<h4 class="slide__subtitle">에스파 | æspa</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/aespa_gray.png);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">지젤 | Giselle</h3>
+						<h4 class="slide__subtitle">에스파 | æspa</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/redvelvet_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">아이린 | IRENE</h3>
+						<h4 class="slide__subtitle">레드벨벳 | Red Velvet</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/redvelvet_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">슬기 | SEULGI</h3>
+						<h4 class="slide__subtitle">레드벨벳 | Red Velvet</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/redvelvet_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">웬디 | WENDY</h3>
+						<h4 class="slide__subtitle">레드벨벳 | Red Velvet</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/redvelvet_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">조이 | JOY</h3>
+						<h4 class="slide__subtitle">레드벨벳 | Red Velvet</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/redvelvet_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">예리 | YERI</h3>
+						<h4 class="slide__subtitle">레드벨벳 | Red Velvet</h4>
+					</div>
+				</div>
+				<!--
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/got7_gray.jpg);"></div>
+					</div>
+					<div class="slide__side">Hopes &amp; Dreams</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">6</span>
+						<h3 class="slide__title">갓세븐 | GOT7</h3>
+						<h4 class="slide__subtitle">JAY B | 마크 | 잭슨 | 진영 | 영재 | 뱀뱀 | 유겸</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/wannaone_gray.jpg);"></div>
+					</div>
+					<div class="slide__side">Hopes &amp; Dreams</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">7</span>
+						<h3 class="slide__title">워너원 | Wanna One</h3>
+						<h4 class="slide__subtitle">강다니엘 | 박지훈 | 이대휘 | 김재환 | 옹성우 | 박우진 | 라이관린 | 윤지성 | 황민현 | 배진영 | 하성운</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/gfriend_gray.jpg);"></div>
+					</div>
+					<div class="slide__side">Hopes &amp; Dreams</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">8</span>
+						<h3 class="slide__title">여자친구 | GFRIEND</h3>
+						<h4 class="slide__subtitle">신비 | 은하 | 소원 | 유주 | 예린 | 엄지</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/ohmygirl_gray.jpg);"></div>
+					</div>
+					<div class="slide__side">Hopes &amp; Dreams</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">9</span>
+						<h3 class="slide__title">오마이걸 | OH MY GIRL</h3>
+						<h4 class="slide__subtitle">미미 | 아린 | 승희 | 유아 | 지호 | 효정 | 비니</h4>
+					</div>
+				</div>
+			-->
+				<button class="nav nav--prev">
+					<svg class="icon icon--navarrow-prev">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+				<button class="nav nav--next">
+					<svg class="icon icon--navarrow-next">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="content">
+				<div class="content__item">
+					<span class="content__number">1</span>
+					<h3 class="content__title">블랙핑크 | BLACKPINK</h3>
+					<h4 class="content__subtitle">제니 | 지수 | 로제 | 리사</h4>
+					<div class="content__text">블랙핑크(BLACKPINK)는 2016년 8월에 데뷔한 대한민국의 YG 엔터테인먼트 소속 4인조 다국적 걸 그룹이다. YG 소속 아티스트들 중 처음으로 리더가 없는 그룹으로, 구성원 네 명이 친구처럼 지내며 서로 상의하여 더 좋은 결과를 만들기 위해 리더를 정하지 않았다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">2</span>
+					<h3 class="content__title">방탄소년단 | BTS</h3>
+					<h4 class="content__subtitle">RM | 진 | 슈가 | 제이홉 | 지민 | 뷔 | 정국</h4>
+					<div class="content__text">방탄소년단(防彈少年團, 영어: Bulletproof Boy Scouts, BTS)은 2013년 6월 13일에 데뷔한 빅히트 뮤직 소속 대한민국 7인조 보이 그룹이다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">3</span>
+					<h3 class="content__title">트와이스 | Twice</h3>
+					<h4 class="content__subtitle">지효 | 나연 | 정연 | 모모 | 사나 | 미나 | 다현 | 채영 | 쯔위</h4>
+					<div class="content__text">트와이스(영어: Twice, 일본어: トゥワイス 토와이스)는 JYP 엔터테인먼트 소속의 대한민국의 다국적 9인조 그룹이다. 대한민국 걸 그룹 역사상 가장 많은 음악방송 우승과 트리플크라운, 전세계 걸 그룹 최초 앨범 판매량 1000만장을 돌파하며, 역대 최고의 걸그룹 중 하나이며 블랙핑크와 함께 3세대 최고의 걸 그룹 이라고 평가받는다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">4</span>
+					<h3 class="content__title">에스파 | æspa</h3>
+					<h4 class="content__subtitle">카리나 | 닝닝 | 윈터 | 지젤</h4>
+					<div class="content__text">에스파(æspa)는 대한민국의 다국적 걸 그룹이다. 2020년 11월 17일 데뷔하였으며, SM 엔터테인먼트 소속이다. SMCU 프로젝트의 첫 주자로 나서게 되며, 프로젝트 내에서 독립적인 세계관으로 이야기를 펼치고 있다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">5</span>
+					<h3 class="content__title">레드벨벳 | Red Velvet</h3>
+					<h4 class="content__subtitle">아이린 | 슬기 | 웬디 | 조이 | 예리</h4>
+					<div class="content__text">레드벨벳(영어: Red Velvet)은 SM 엔터테인먼트 소속의 대한민국 5인조 걸 그룹이다. 팀명은 강렬하고 매혹적인 컬러 Red와 부드러운 느낌의 Velvet에서 연상되는 감각적인 이미지처럼, 색깔 있고 세련된 음악과 퍼포먼스로 선보이겠다는 포부를 담고 있다. 2014년 8월 1일 데뷔 이래로, 레드벨벳은 2개의 스튜디오 앨범과 1개의 재발매 앨범, 그리고 7개의 ED를 발매했으며 이 중 8개는 대한민국의 가온 앨범 차트에서 상위권에 진입하였다. Ice Cream Cake, Dumb Dumb, 러시안 룰렛 (Russian Roulette), Rookie, 피카부 (Peek-A-Boo), 그리고 Bad Boy, Psycho 모두 가온 디지털 차트에서 5위권 안에 들었으며, 또 다른 싱글인 빨간 맛 (Red Flavor)과 Power Up은 처음 발표되자마자 1위에 올랐다. 레드벨벳은 타임과 빌보드에서 세계적으로 가장 인기있는 K-pop 아이돌 중 한 명으로 뽑혔으며, 2015년 골든디스크 신인상과 2017년 Mnet 아시안 뮤직 어워드 여자 그룹상을 비롯해 여러 상을 수상했다. The ReVe Festival 3부작의 발표 이후 레드벨벳은 대한민국 여자 아이돌 중에서는 최초로 미국 아이튠즈 앨범 차트에서 1위를 달성했고, 같은 달에 3번이나 1위를 연이어 달성한 최초의 걸그룹이 되었다. 2019년 아시아 아티스트 어워즈에서 음파음파 (Umpah Umpah)가 올해의 노래로 선정되었고, 레드벨벳은 아시아 셀러브리티 가수에 선정되었다. 또한 2019년 소리바다 베스트 케이뮤직 어워즈에서 올해의 무대상을 수상하기도 했다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">6</span>
+					<h3 class="content__title">갓세븐 | GOT7</h3>
+					<h4 class="content__subtitle">JAY B | 마크 | 잭슨 | 진영 | 영재 | 뱀뱀 | 유겸</h4>
+					<div class="content__text">JYP엔터테인먼트에서 2014년 1월 16일에 데뷔한 7인조 다국적 보이그룹이다. 한국인 4명, 대만계 미국인 1명, 홍콩인 1명, 태국인 1명으로 구성되었다. 초창기에 밝힌 그룹 이름의 뜻은 행운을 가진 일곱 명이다.[6] 캐치프라이즈는 Come and get it, GOT7! 2021년 1월 19일, JYP엔터테인먼트와의 7년 전속계약이 만료되었고 멤버 전원이 JYP를 떠났다. 다만 소속사를 떠났을 뿐 해체한 것은 아니며 당분간은 개인 활동에 집중한다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">7</span>
+					<h3 class="content__title">워너원 | Wanna One</h3>
+					<h4 class="content__subtitle">강다니엘 | 박지훈 | 이대휘 | 김재환 | 옹성우 | 박우진 | 라이관린 | 윤지성 | 황민현 | 배진영 | 하성운</h4>
+					<div class="content__text">Wanna One은 2017년 8월 7일에 데뷔한 대한민국의 11인조 보이그룹이다. 국내 가수 최초로 고척 스카이돔에서 데뷔하였으며 2019년 1월 27일까지 프로젝트 그룹으로서 활동했다.
+
+						2017년 4월 7일부터 6월 16일까지 약 3개월간 방영된 엠넷의 서바이벌 프로그램 '프로듀스 101 시즌2'을 통해 결성되었다. 프로그램의 폭발적인 인기로 인해 높은 대중성과 탄탄한 팬덤을 갖고 데뷔하였다.
+						
+						그룹명 Wanna One은 ‘프로듀스 101 시즌2’의 제목인 ‘101(원오원)’의 발음에서 따왔다. 그룹명은 '프로듀스 101 시즌2' 마지막화에서 공개되었으며, 프로그램의 전 시즌인 '프로듀스 101'을 통해 데뷔한 아이오아이의 그룹명을 네이밍을 한 인물과 같은 인물이 지었고, 모두 하나가 된다라는 의미라고 한다. 아마 'Want a one'을 염두한 네이밍인 듯 하고 영문법상으로 'Want a one'은 틀린 표현이지만 영문법과 관계없이 그룹명은 고유명사이므로 문제가 되지 않는다.
+						
+						공식 명칭은 Wanna One이지만 흔히 워너원이라고 불린다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">8</span>
+					<h3 class="content__title">여자친구 | GFRIEND</h3>
+					<h4 class="content__subtitle">신비 | 은하 | 소원 | 유주 | 예린 | 엄지</h4>
+					<div class="content__text">여자친구(영어: GFRIEND)는 대한민국의 연예 기획사 쏘스뮤직 소속의 6인조 걸 그룹이었다. 그룹명은 여자에게는 좋은 친구처럼, 남자에게는 여자친구처럼 대중들과 항상 함께하고 싶다는 의미를 담고 있다.
+
+						여자친구는 2015년 1월 15일 첫 번째 미니앨범 "Season of Glass"를 발매하고 2015년 1월 16일에 정식 데뷔하였다. 2016년 1월 25일 여자친구는 세 번째 미니 앨범 "SNOWFLAKE"를 발매하였다. 타이틀 곡은 ‘학교 3부작’의 마지막을 장식하는 곡 “시간을 달려서”이다. 이 노래는 ‘학교 3부작’의 마지막을 장식하는 곡이다. 2017년 3월 6일 네 번째 미니 앨범 "THE AWAKENING"을 발매하였다. 이 앨범은 2016년까지 이어졌던 ‘파워청순’ 대신 ‘파워시크’ 콘셉트를 적용하였다.
+						
+						2020년 2월 3일 여덟 번째 미니앨범 "回:LABYRINTH"를 발매하며 회(回)시리즈를 시작하였다. 타이틀 곡은 '교차로 (Crossroads)'이며 3주 동안의 활동으로 7관왕을 달성하였다. 7월 13일 아홉 번째 미니앨범 "回:Song of the Sirens"를 발매하였다. 타이틀 곡은 'Apple'이다. 데뷔 후 컨셉적으로 첫 파격 변신한 앨범이다. (엄지, 유주, 은하가 작사 및 작곡에 참여.) 2주 동안의 활동으로 3관왕을 달성하였다.
+						
+						2021년 5월 18일 여자친구의 소속사 쏘스뮤직 측은 여자친구와의 재계약이 불발되어 계약이 만료되는 2021년 5월 22일에 데뷔 6년만에 해체되었다. 갑작스러운 여자친구의 해체에 쏘스뮤직은 사과와 후속조치에 대한 안내를 덧붙였지만, 2021년 7월 현재까지도 팬들을 무시하는 태도를 보이고 있다.</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">9</span>
+					<h3 class="content__title">오마이걸 | OH MY GIRL</h3>
+					<h4 class="content__subtitle">미미 | 아린 | 승희 | 유아 | 지호 | 효정 | 비니</h4>
+					<div class="content__text">2015년 4월 21일 데뷔한 WM엔터테인먼트 소속 7인조 걸그룹이다.
+						그룹명은 대중들의 마이걸이 되기 위해 오마이걸로 지었다고 한다. 멤버는 나이 순으로 효정, 미미, 유아, 승희, 지호, 비니, 아린이다. 리더는 연장자인 효정이 맡게 되었다.
+						
+						2019년 퀸덤 활동을 기점으로 어마어마한 속도로 급성장하며 음원 강자로 거듭난 차세대 대표주자들중 하나인 걸그룹.</div>
+				</div>
+
+				
+				<button class="content__close">
+					<svg class="icon icon--longarrow">
+						<use xlink:href="#icon-longarrow"></use>
+					</svg>
+				</button>
+			</div>
+			
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>

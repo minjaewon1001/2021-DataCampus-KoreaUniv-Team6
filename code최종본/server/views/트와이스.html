@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Get Information of K-Pop Celebrities</title>
+		<meta name="description" content="A triple view diagonal slideshow with content preview.">
+		<meta name="keywords" content="">
+		<meta name="author" content="Codrops">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			ul{
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+		<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+			<symbol id="icon-longarrow" viewBox="0 0 54 24">
+				<title>longarrow</title>
+				<path d="M.42 11.158L12.38.256c.333-.27.696-.322 1.09-.155.395.166.593.467.593.903v6.977h38.87c.29 0 .53.093.716.28.187.187.28.426.28.716v5.98c0 .29-.093.53-.28.716a.971.971 0 0 1-.716.28h-38.87v6.977c0 .416-.199.717-.592.903-.395.167-.759.104-1.09-.186L.42 12.62a1.018 1.018 0 0 1 0-1.462z" />
+			</symbol>
+			<symbol id="icon-navarrow" viewBox="0 0 408 408">
+				<title>navarrow</title>
+				<polygon fill="#fff" fill-rule="nonzero" points="204 0 168.3 35.7 311.1 178.5 0 178.5 0 229.5 311.1 229.5 168.3 372.3 204 408 408 204"></polygon>
+			</symbol>
+		</svg>
+		<main>
+			<div class="frame">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title">Get Information of K-Pop Celebrities for one click</h1>
+				<!--
+					<div class="codrops-links">
+						<a class="github" href="https://github.com/minjaewon1001/2021-DataCampus-KoreaUniv-Team6">Us GitHub</a>
+					
+						<a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/SlideOutBoxMenu/" title="Previous Demo">
+							<svg class="icon icon--arrow">
+								<use xlink:href="#icon-arrow"></use>
+							</svg>
+						</a>
+						<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=35765" title="Back to the article">
+							<svg class="icon icon--drop">
+								<use xlink:href="#icon-drop"></use>
+							</svg>
+						</a>
+				-->
+					</div>
+				</header>
+			</div>
+			<div class="slideshow", id="profile">
+				<div class="slideshow__deco"></div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jihyo.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">1</span>
+						<h3 class="slide__title">지효 | Jihyo</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/nayeon.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">2</span>
+						<h3 class="slide__title">나연 | Nayeon</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jeongyeon.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">3</span>
+						<h3 class="slide__title">정연 | Jeongyeon</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/momo.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">모모 | Momo</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/sana.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">5</span>
+						<h3 class="slide__title">사나 | Sana</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/mina.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">6</span>
+						<h3 class="slide__title">미나 | Mina</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/dahyun.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">7</span>
+						<h3 class="slide__title">다현 | Dahyun</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/chaeyoung.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">8</span>
+						<h3 class="slide__title">채영 | Chaeyoung</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/tzuyu.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">9</span>
+						<h3 class="slide__title">쯔위 | Tzuyu</h3>
+						<h4 class="slide__subtitle">트와이스 | Twice</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/twice_gray.jfif);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">0</span>
+						<h3 class="slide__title">트와이스 | Twice</h3>
+						<h4 class="slide__subtitle">지효 | 나연 | 정연 | 모모 | 사나 | 미나 | 다현 | 채영 | 쯔위</h4>
+					</div>
+				</div>
+
+				<button class="nav nav--prev">
+					<svg class="icon icon--navarrow-prev">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+				<button class="nav nav--next">
+					<svg class="icon icon--navarrow-next">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="content">
+				<div class="content__item">
+					<span class="content__number">1</span>
+					<h3 class="content__title">지효 | Jihyo</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 지효(박지효)</li>
+							<li>생년월일 : 1997-02-01</li>
+							<li>출생 : 경기도 구리시 인창동</li>
+							<li>신장 : 160cm</li>
+							<li>별명 : god지효, 10년차 연습생, 마이크,<br>
+								리더, 착한 지효, 애교장인, 쌈기꾼, 푸린, 효마스, 눕지효 ...</li>
+						</ul>
+						<br><hr size="5" noshade><br>
+						JYP에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 리더.<br>
+						캐치프레이즈는 마이크이며, 상징 색깔은 #f9cc85.<br>
+						팀 내 메인보컬과 멘트 진행을 맡고 있는 서글서글한 성격의 리더이다.
+
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">2</span>
+					<h3 class="content__title">나연 | Nayeon</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 나연(임나연)</li>
+							<li>생년월일 : 1995-09-22</li>
+							<li>출생 : 서울특별시 강동구 상일동</li>
+							<li>신장 : 163cm</li>
+							<li>별명 : 맏내(맏언니), 미소여왕, 토끼여왕, 고유나연,<br>
+								서열 9위, 과즙녀, 나롬, 나부기, 나숭, 나봉쓰, 백지토, 토끼언니</li>
+						</ul>
+						<br><hr size="5" noshade><br>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.<br>
+						캐치프레이즈는 밝은 에너지. 상징 색깔은 #49c0ec.
+						<br>팀 내의 센터, 리드보컬과 리드댄서를 맡고 있다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">3</span>
+					<h3 class="content__title">정연 | Jeongyeon</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 정연(유정연)</li>
+							<li>생년월일 : 1996-11-01</li>
+							<li>출생 : 경기도 수원시 장안구</li>
+							<li>신장 : 167cm</li>
+							<li>별명 : 타조, 유또검, 유또막, 유장꾸, 정연맘, 유또울,<br>
+								유정선배, 걸크러시, 유정해씨, 노잼형[, 정뭉이, 쩡여니, 힘정연 ...</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.<br>
+						캐치프레이즈는 카리스마이며, 리드보컬과 예능, 걸크러시 캐릭터를 담당하고 있는 멤버. 상징 색깔은 #a3cc54.
+						<br>데뷔 초에 밀었던 카리스마(센 이미지)와는 달리 성격 자체는 장난기 많고(유장꾸), 겁도 많고, 눈물도 많고 여린 면도 많아보인다.
+						<br>그래서 일각에서는 '정연이는 세고 보이시한 캐릭터가 아니라 그냥 숏컷이 잘 어울리는 거다.'라고 하기도.
+						<br>DTNA 활동부터 약 1년 간 긴 머리로 새로운 이미지를 보여주기도 했다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">4</span>
+					<h3 class="content__title">모모 | Momo</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 모모(Hirai Momo, 히라이 모모)</li>
+							<li>생년월일 : 1996-11-09</li>
+							<li>출생 : 일본 교토</li>
+							<li>신장 : 162cm</li>
+							<li>별명 : 모모링(ももりん), 모구리, 모구링, 자타공인 댄싱퀸, 댄싱모신...</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>팀의 셋째로 메인댄서를 맡고 있다.
+						<br>캐치프레이즈는 데뷔 이전에는 복숭아에서 태어난 모모입니다였고
+						<br>데뷔 이후에는 TWICE에서 퍼포먼스를 담당하고 있는 모모입니다이며,
+						<br>유독 허당들이 많은 TWICE 내에서도 돋보이는 허당이자 바보 캐릭터를 맡고 있고,
+						<br>무대에서는 주로 댄스브레이크와 퍼포먼스를 담당하며,
+						<br>곡 내에서는 귀여운 음색으로 브릿지 파트를 맡고 있다. 상징 색깔은 #e67ea3.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">5</span>
+					<h3 class="content__title">사나 | Sana</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 사나(Minatozaki SaNa, 미나토자키 사나)</li>
+							<li>생년월일 : 1996-12-29</li>
+							<li>출생 : 일본 오사카</li>
+							<li>신장 : 164cm</li>
+							<li>별명 : 사나 없이 사나 마나, 샤샤, 김사나, 사또떨,<br>
+								사낫치(サナッチ), 샤샤샤, 샤나, 샤랑둥이, 오사카꿀주먹, 햄찌사나, 오효짱...</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>캐치프레이즈로 큐티 섹시를 담당하는데,
+						<br>귀여움 한 컵에 섹시함 한 스푼쯤 되는 큐티 섹시라고 표현되는 성향을 보여주고 있다.
+						<br>SIXTEEN 당시에는 귀여운 얼굴과는 다르게 은근한 섹시한 매력으로 인기를 끌었다.
+						<br>이목구비가 뚜렷한 얼굴형이다.
+						<br>더불어 하이텐션, 애교, 어리바리, 능숙한 한국어로 예능을 맡고 있는 멤버이다.
+						<br>상징 색깔은 보라색(#8c79b4).
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">6</span>
+					<h3 class="content__title">미나 | Mina</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 미나(Myoi Mina, 묘이 미나)</li>
+							<li>생년월일 : 1997-03-24</li>
+							<li>출생 : 미국 텍사스 주 샌안토니오 / 일본국적</li>
+							<li>신장 : 163cm</li>
+							<li>별명 : 미나리, 엔젤, 다크 섹시, 블랙스완, 펭귄,<br>
+								미땅(みーたん), 매혹의 발레리나, 샤론, 정남이, 미구리, 무잼이, 찾잼이</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>팀에서 메인댄서, 서브보컬을 맡고 있다.
+						<br>캐치프레이즈는 블랙 스완이며, 상징 색깔은 #71c7d4.
+						<br>청순한 인상과는 별개로 찾잼, 꽁냥함 등 여러 가지 귀여운 모습도 가진 멤버다.
+						<br>팀 내의 이미지는 청순함, 처연함, 다크 섹시. 정말 다양한 매력이 공존하는 멤버.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">7</span>
+					<h3 class="content__title">다현 | Dahyun</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 다현(김다현)</li>
+							<li>생년월일 : 1998-05-28</li>
+							<li>출생 : 경기도 성남시 중원구 은행동</li>
+							<li>신장 : 158.8cm</li>
+							<li>별명 : 두부, 예능 유망주, 독수리녀, 흥 많은 두부,
+								<br>흥부, 둡, 둡다, 둡린이, 둡저씨, 이글킴, 김이글, 파이리...</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>캐치프레이즈는 흥 많은 두부며,
+						<br>팀 내 포지션은 리드래퍼와 서브보컬을 맡고 있다.
+						<br>흥과 끼, 순발력을 고루 갖춘 멤버.
+						<br>하얀 피부와 순둥한 볼살, 귀여운 외모가 매력 포인트다.
+						<br>또한 이목구비가 뚜렷한 편이다. 상징 색깔은 #fefefe.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">8</span>
+					<h3 class="content__title">채영 | Chaeyoung</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 채영(손채영)</li>
+							<li>생년월일 : 1999-04-23</li>
+							<li>출생 : 서울특별시 강동구 둔촌동</li>
+							<li>신장 : 167cm</li>
+							<li>별명 : 챙, 아기 맹수, 딸기 공주, 손화백, 째용이,
+								<br>챙카소, 노잼 동생, 심바, 귤챙, 애기언니, 어깨깡패, 째여이, 챙정민</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>캐치프레이즈는 꼬맹이 래퍼로 이름답게 메인래퍼를 담당하고 있다.
+						<br>상징 색깔은 #e62722.
+						<br>무대에선 스웩 넘치는 멋진 모습을 하고 있지만,
+						<br>무대 밖에선 명랑한 막내이고 발랄한 TWICE의 래퍼이다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">9</span>
+					<h3 class="content__title">쯔위 | Tzuyu</h3>
+					<h4 class="content__subtitle">트와이스 | Twice</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 쯔위(Chou Tzuyu, 저우쯔위)</li>
+							<li>생년월일 : 1999-06-14</li>
+							<li>출생 : 대만 타이난시</li>
+							<li>신장: 170cm</li>
+							<li>요다, 주희, 자유, 샐리(Sally), 무결점 최강비율,
+								<br>초콜릿, 기럭지 막내, 쯔쯔, 쯔쁘, 대만지광,</li>
+						</ul>
+						<hr size="5" noshade>
+						JYP엔터테인먼트에서 2015년 10월 20일 데뷔한 9인조 그룹 TWICE의 멤버.
+						<br>캐치프레이즈는 TWICE의 기럭지 막내이며, 그에 걸맞게 막내이면서도 팀 내 최장신이다.
+						<br>상징 색깔은 #2253a3.
+						<br>출중한 이목구비와 타고난 기럭지로 그룹 내 비주얼의 중심을 맡고 있으며,
+						<br>무대 밖에서는 멤버들과 잘 놀고 잘 웃는 사랑스러운 막내다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">0</span>
+					<h3 class="content__title">트와이스 | Twice</h3>
+					<h4 class="content__subtitle"></h4>
+					<div class="content__text">
+						<ul>
+							<li>소속사 : JYP 엔터테인먼트</li>
+							<li>데뷔 : 2015-10-20</li>
+							<li>팬덤 : ONCE</li>
+						</ul>
+						<hr size="5" noshade>
+						<strong>
+							“ONE IN A MILLION! 안녕하세요, TWICE입니다!!”
+						</strong>
+						<hr size="5" noshade>
+						TWICE는 2015년 10월 20일에 데뷔한 JYP엔터테인먼트 소속
+						<br>한국인 5명, 일본인 3명, 대만인 1명으로 이루어진 대한민국의 9인조 다국적 그룹이다.
+						<br>3세대 K-POP 걸그룹의 세대교체를 이끈 주역 중 하나로 평가를 받는 그룹이기도 하며,
+						<br>데뷔 초부터 지금에 이르기까지 폭발적인 성적을 바탕으로 3세대 K-POP을 대표하는 정상급 그룹 중 하나로 꼽히고 있다.
+						<br>시그니처 사운드는 멤버들이 다 함께 "TWICE!"라고 외치는 사운드다.
+
+					</div>
+				</div>
+				<button class="content__close">
+					<svg class="icon icon--longarrow">
+						<use xlink:href="#icon-longarrow"></use>
+					</svg>
+				</button>
+			</div>
+			
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>

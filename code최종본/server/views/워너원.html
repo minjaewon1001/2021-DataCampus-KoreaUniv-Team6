@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Get Information of K-Pop Celebrities</title>
+		<meta name="description" content="A triple view diagonal slideshow with content preview.">
+		<meta name="keywords" content="">
+		<meta name="author" content="Codrops">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			ul{
+				display: table;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+		<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+		</script>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 " />
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z" />
+				<path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z" />
+			</symbol>
+			<symbol id="icon-longarrow" viewBox="0 0 54 24">
+				<title>longarrow</title>
+				<path d="M.42 11.158L12.38.256c.333-.27.696-.322 1.09-.155.395.166.593.467.593.903v6.977h38.87c.29 0 .53.093.716.28.187.187.28.426.28.716v5.98c0 .29-.093.53-.28.716a.971.971 0 0 1-.716.28h-38.87v6.977c0 .416-.199.717-.592.903-.395.167-.759.104-1.09-.186L.42 12.62a1.018 1.018 0 0 1 0-1.462z" />
+			</symbol>
+			<symbol id="icon-navarrow" viewBox="0 0 408 408">
+				<title>navarrow</title>
+				<polygon fill="#fff" fill-rule="nonzero" points="204 0 168.3 35.7 311.1 178.5 0 178.5 0 229.5 311.1 229.5 168.3 372.3 204 408 408 204"></polygon>
+			</symbol>
+		</svg>
+		<main>
+			<div class="frame">
+				<header class="codrops-header">
+					<h1 class="codrops-header__title">Get Information of K-Pop Celebrities for one click</h1>
+					</div>
+				</header>
+			</div>
+			<div class="slideshow", id="profile">
+				<div class="slideshow__deco"></div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/daniel.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">1</span>
+						<h3 class="slide__title">강다니엘 | Kang Daniel</h3>
+						<h4 class="slide__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jisung.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">2</span>
+						<h3 class="slide__title">윤지성 | Yoon Ji-sung</h3>
+						<h4 class="slide__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/sungwoon.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">3</span>
+						<h3 class="slide__title">하성운 | Ha Sung-woon</h3>
+						<h4 class="slide__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/minhyun.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">4</span>
+						<h3 class="slide__title">황민현 | Hwang Minhyun</h3>
+						<h4 class="slide__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/sungwoo.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="content__number">5</span>
+					    <h3 class="content__title">옹성우 | Ong Seong Wu</h3>
+					    <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					    </div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jaehwan.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="content__number">6</span>
+					    <h3 class="content__title">김재환 | Kim Jae-hwan</h3>
+					    <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jihoon.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="content__number">7</span>
+                        <h3 class="content__title">박지훈 | Park Jihoon</h3>
+                        <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/woojin.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="content__number">8</span>
+					    <h3 class="content__title">박우진 | Park Woojin</h3>
+					    <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/jinyoung.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="content__number">9</span>
+					    <h3 class="content__title">배진영 | Bae Jinyoung</h3>
+					    <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/daehwii.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+                        <span class="content__number">10</span>
+                        <h3 class="content__title">이대휘 | Lee Dae-hwi</h3>
+                        <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                <div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/guanrin.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+                        <span class="content__number">11</span>
+                        <h3 class="content__title">라이관린 |  Lai Kuanlin</h3>
+                        <h4 class="content__subtitle">워너원 | Wanna One</h4>
+					</div>
+				</div>
+                
+				<div class="slide">
+					<div class="slide__img-wrap">
+						<div class="slide__img" style="background-image: url(img/wannaone_gray.jpg);"></div>
+					</div>
+					<div class="slide__side", style="color : white;">Who is he/she?</div>
+					<div class="slide__title-wrap">
+						<span class="slide__number">0</span>
+						<h3 class="slide__title">워너원 | Wanna One</h3>
+						<h4 class="slide__subtitle">강다니엘 | 윤지성 | 하성운 | 황민현 | 옹성우 | 김재환 | 박우진 | 박지훈 | 배진영 | 이대휘 | 라이관린</h4>
+					</div>
+				</div>
+
+				<button class="nav nav--prev">
+					<svg class="icon icon--navarrow-prev">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+				<button class="nav nav--next">
+					<svg class="icon icon--navarrow-next">
+						<use xlink:href="#icon-navarrow"></use>
+					</svg>
+				</button>
+			</div>
+            
+			<div class="content">
+				<div class="content__item">
+					<span class="content__number">1</span>
+					<h3 class="content__title">강다니엘 | Kang Daniel</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 강다니엘</li>
+							<li>생년월일 : 1996-12-10</li>
+							<li>출생 : 부산광역시 금정구 회동동</li>
+							<li>신장 : 181.5cm</li>
+						</ul>
+						<br><hr size="5" noshade>
+						<strong>
+							이미 시장성이 확인된 완성형의 유망주.<br>
+                            아이돌 산업의 역사를 새로 쓰고 있다.<br><br>
+						</strong>
+						한국의 젊은 영웅들 2030 中 허남웅 영화평론가<br>
+						<hr size="5" noshade><br>
+                        프로듀스 101 시즌2을 통해 탄생한 프로젝트 그룹 Wanna One의 멤버이며, 센터, 메인댄서, 리드래퍼, 서브보컬을 맡았다.<br>
+                        2019년 7월 25일 솔로 아이돌로 데뷔하여 활동중이다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">2</span>
+					<h3 class="content__title">윤지성 | Yoon Ji-sung</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 윤지성</li>
+							<li>생년월일 : 1991-03-08</li>
+							<li>출생 : 강원도 원주시</li>
+							<li>신장 : 175cm</li>
+						</ul>
+						<br><hr size="5" noshade>
+						<strong>
+							할 수 있는 건 잘할 거고요, 못하는 건 열심히 하겠습니다.<br>
+                            응원해요, 당신의 하루를.<br><br>
+						</strong>
+                        프로듀스 101 시즌2/10회 中<br>
+						국민 프로듀서에게 전하는 편지 中<br>
+						<hr size="5" noshade><br>
+                        프로듀스 101 시즌2에 참가한 MMO엔터테인먼트 소속의 연습생이었던 Wanna One의 멤버이며, 리더, 서브보컬을 맡았었다.<br><br>
+                        프로듀스 101 시즌2 방영 당시 1회부터 리액션으로 주목을 받았다. 참가자들 중에는 상대적으로 나이가 많은 편. 첫 투표에서는 35위를 기록하며 선전했다. 쉴 새 없는 수다로 분량만큼은 여느 상위권 참가자들 못지 않게 뽑아냈다. 재치 있는 예능감으로 탄탄한 팬층을 끌어모았으며, 최종적으로 8위로 데뷔에 성공하며 Wanna One의 멤버가 되었다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">3</span>
+					<h3 class="content__title">하성운 | Ha Sung-woon</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 하성운</li>
+							<li>생년월일 : 1994-03-22</li>
+							<li>출생 : 경기도 고양시</li>
+							<li>신장 : 167cm</li>
+                            <li>포지션 : 메인보컬</li>
+                            <li>별명 : 구름, 셍언, 떵웅, 애기땅콩, 포메</li>
+                            <li>취미 : 당구, 게임하기</li>
+                            <li>특기 : 노래, 축구</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        보이그룹 핫샷과 프로젝트 그룹 워너원에서 메인보컬로 활동했었다.<br><br>
+                        2019년 2월 28일 첫 솔로 앨범을 발매하며 본격적으로 솔로 가수로서 활동을 시작했다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">4</span>
+					<h3 class="content__title">황민현 | Hwang Minhyun</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 황민현</li>
+							<li>생년월일 : 1995-08-09</li>
+							<li>출생 : 부산광역시 수영구</li>
+							<li>신장 : 181cm</li>
+                            <li>포지션 : 리드보컬</li>
+                            <li>별명 : 황, 황제, 사막여우, 애옹이, 하얀둥이</li>
+                            <li>MBTI : ESFJ</li>
+                            <li>좌우명 : 흠이 없는 사람이 되자</li>
+                            <li>소속사 : 플레디스 엔터테인먼트</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        대한민국의 가수, 배우, 뮤지컬 배우이며 5인조 보이그룹 뉴이스트의 멤버이다.<br><br>
+                        2012년 3월 15일 <FACE>로 정식 데뷔하였으며, 프로젝트 보이그룹 Wanna One의 최종 9위로 발탁되어 2017년 8월 7일 <에너제틱>으로 재데뷔하고 512일간 Wanna One의 멤버로 큰 사랑을 받으며 활동하였다. 2019년부터 다시 뉴이스트 완전체로 활발한 활동을 이어가고 있다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">5</span>
+					<h3 class="content__title">옹성우 | Ong Seong Wu</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 옹성우</li>
+							<li>생년월일 : 1995-08-25</li>
+							<li>출생 : 인천광역시 남동구 구월동</li>
+							<li>신장 : 179cm</li>
+						</ul>
+						<br><hr size="5" noshade>
+						<strong>
+							균형감. 옹성우를 설명할 수 있는 가장 적합한 단어다.<br>
+                            어디 하나 모자라거나 넘치지 않는 황금 비율의 청년.<br>
+                            패기가 있되 여유가 있고 꿈을 노래하되 노력을 멈추지 않는 캐릭터.<br><br>
+						</strong>
+                        GQ '나는 왜 옹성우를 지지했나' 中 영화사 '무브먼트' 대표 진명현<br>
+						
+						<hr size="5" noshade><br>
+                        대한민국의 가수 겸 배우. 프로듀스 101 시즌2을 통해 탄생한 11인조 프로젝트 보이그룹 Wanna One의 멤버로 데뷔하여 리드보컬과 리드댄서를 맡았었다. Wanna One의 활동 종료 이후 현재는 솔로 가수와 배우 활동을 병행하며 활약 중이다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">6</span>
+					<h3 class="content__title">김재환 | Kim Jae-hwan</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 김재환</li>
+							<li>생년월일 : 1996-05-27</li>
+							<li>출생 : 서울특별시 강서구</li>
+							<li>신장 : 175cm</li>
+                            <li>포지션 : 메인보컬</li>
+                            <li>별명 : 순얼방음, 킹(킹재환), 워너원의 메인보컬, 째니, 고막남친</li>
+                            <li>MBTI : ENFJ</li>
+                            <li>취미 : 먹기, 축구, 춤, 게임, 잠자기, 보드</li>
+                            <li>소속사 : SWING 엔터테인먼트</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        대한민국의 가수이다. 프로듀스 101 시즌2에서 최종 4위에 오르면서 프로젝트 그룹 Wanna One의 메인보컬로 1년 6개월 간 활동했으며, 2019년 5월 20일 첫 솔로 앨범을 발매하며 솔로 가수로서 활동을 시작했다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">7</span>
+					<h3 class="content__title">박지훈 | Park Jihoon</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 박지훈</li>
+							<li>생년월일 : 1999-05-29</li>
+							<li>출생 : 경상남도 마산시</li>
+							<li>신장 : 173cm</li>
+                            <li>포지션 : 서브보컬, 서브래퍼, 리드댄서</li>
+                            <li>별명 : 윙크남, 윙깅이, 저장남, 후니</li>
+                            <li>특기 : 팝핀, 비트박스</li>
+                            <li>취미 : 게임</li>
+                            <li>소속사 : 마루기획</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        대한민국의 가수 겸 배우이다. 프로듀스 101 시즌2를 통해 탄생한 11인조 보이그룹 Wanna One의 멤버로 활동했었으며, 당시 서브보컬, 서브래퍼, 리드댄서를 맡았었다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">8</span>
+					<h3 class="content__title">박우진 | Park Woojin</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 박우진</li>
+							<li>생년월일 : 1999-11-02</li>
+							<li>출생 : 부산광역시 사하구</li>
+							<li>신장 : 178cm</li>
+                            <li>포지션 : 메인래퍼, 메인댄서</li>
+                            <li>MBTI : ENFJ</li>
+                            <li>특기 : 팝핀, 비트박스</li>
+                            <li>취미 : 운동, 음악 감상, 정리정돈, 요리, 피규어 모으기, 드라마 보기</li>
+                            <li>소속사 : BrandNew Music</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        대한민국의 가수.<br>
+
+                        2017년, 프로듀스 101 시즌2에서 최종 6위를 차지하여 워너원의 멤버가 되었다.<br>
+
+                        1년 반의 워너원 활동을 마치고, 2019년 5월 22일, 보이그룹 AB6IX로 데뷔했다. 팀 내에서 메인래퍼와 메인댄서를 맡고 있다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">9</span>
+					<h3 class="content__title">배진영 | Bae Jinyoung</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 배진영</li>
+							<li>생년월일 : 2000-05-10</li>
+							<li>출생 : 서울특별시 중구</li>
+							<li>신장 : 180cm</li>
+                            <li>포지션 : 센터, 메인댄서, 보컬</li>
+                            <li>MBTI : ESFP -> ISTP</li>
+                            <li>특기 : 잠자기, 스키, 축구, 공기놀이</li>
+                            <li>취미 : 드라마 보기, 무대 영상 보기, 모니터 하기, 노래 듣기, 노래 부르기</li>
+                            <li>소속사 : BrandNew Music</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        C9엔터테인먼트 소속 5인조 보이그룹 CIX의 멤버이며, 센터, 메인댄서, 보컬을 맡고 있다. 또한 과거 프로듀스 101 시즌2를 통해 탄생한 11인조 보이그룹 Wanna One의 멤버이며, 서브보컬을 맡았다.<br>
+
+                        2017년 프로듀스 101 시즌2에 출연하여 최종 '10위'로 데뷔, Wanna One의 멤버가 되었다.<br>
+
+                        2019년 1월 Wanna One 활동종료 후 4월 솔로가수로 데뷔하였으며 2019년 7월 23일 CIX로 데뷔하였다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">10</span>
+					<h3 class="content__title">이대휘 | Lee Dae-hwi</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 이대휘</li>
+							<li>생년월일 : 2001-01-29</li>
+							<li>출생 : 서울특별시 송파구 풍납동 서울아산병원</li>
+							<li>신장 : 173cm</li>
+                            <li>포지션 : 리드보컬, 메인 프로듀서</li>
+                            <li>MBTI : ESFJ</li>
+                            <li>특기 : 	작곡, 작사, 비트 메이킹, 피아노</li>
+                            <li>취미 : 인터넷 쇼핑, 영화 보기</li>
+                            <li>소속사 : BrandNew Music</li>
+						</ul>
+						<br><hr size="5" noshade>
+						
+						<hr size="5" noshade><br>
+                        4인조 보이그룹 AB6IX의 멤버이며, 메인 프로듀서이자 리드보컬이다.<br><br>
+
+                        Mnet 프로듀스 101 시즌2의 시작을 알린 첫 센터이자 최종회에서 3위를 차지하며 11인조 프로젝트 보이그룹 Wanna One으로 데뷔한 멤버.<br><br>
+
+                        프로듀스 101 시즌2 방영 전, 맛보기로 구성된 '카운트다운 101' 프로그램에서 트레이너 제아의 보컬 Pick과 1분 PR 영상이 인상 깊은 연습생 중에 한 명으로 소개되며 방송 전부터 큰 주목을 받았다.<br><br>
+
+                        프로듀스 101 시즌2 첫 순위 발표부터 최종 순위 발표식까지 11위 밖으로 한 번도 벗어난 적이 없는 세 명의 멤버 중 한 명이기도 하다. 연습생들이 직접 투표해서 뽑은 첫 센터이자, 레벨 테스트에서 두 차례 모두 A클래스를 배정받은 소위 '로열A'로[10], 깔끔한 춤선과 빠른 춤 습득력, 안정적인 보컬 실력, 작사/작곡/편곡 능력 등 다방면에서 뛰어난 능력과 끼가 있는 실력파 아이돌이다.
+					</div>
+				</div>
+                <div class="content__item">
+					<span class="content__number">11</span>
+					<h3 class="content__title">라이관린 |  Lai Kuanlin</h3>
+					<h4 class="content__subtitle">워너원 | Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>활동명(본명) : 라이관린</li>
+							<li>생년월일 : 2001-09-23</li>
+							<li>출생 : 대만 신베이시 린커우구</li>
+							<li>신장 : 183cm</li>
+                            <li>포지션 : 서브래퍼</li>
+                            <li>별명 : 린린, 판린, 걸리버 막내</li>
+                            <li>특기 : 	중국어, 영어</li>
+                            <li>취미 : 음악감상, 기초댄스</li>
+						</ul>
+						<br><hr size="5" noshade>
+						<strong>
+							지금 무엇이 가장 생각나냐고 묻는 질문에 “무대!”라고 말하게 된 6개월차 연습생의 하이라이트는 포지션 평가 무대 ‘겁’이었다. ‘미래든 과거든 상관없이 난 내 삶이 결코 나쁘지 않다는 것을 보여줄 거야.’ 아무런 기교 없이 나지막하게 울리던 진심을 바탕으로 ‘래퍼 되고 싶어 팝핀 배우고 싶어 / 맛있는 거 먹고 싶어 늦잠이 자고 싶어’라던 이 귀여운 가사는 어떤 힙합의 펀치라인보다 강했다. 센터 라이관린은 자신을 그 곡과 가사에 완벽히 어울리는 사람로 연출해냈다. 그 무대는 연습생의 평가무대가 아닌, 라이관린이라는 한 스타의 데뷔 쇼케이스처럼 보였다.
+						</strong>
+                        GQ 나는 왜 라이관린을 지지했나 中<br>
+						
+						<hr size="5" noshade><br>
+                        라이관린은 Wanna One과 우석X관린의 멤버로, 그룹에서 서브래퍼를 맡고 있다.<br><br>
+
+                        현재는 한국을 떠나 중국에서 활동하고 있다.
+					</div>
+				</div>
+				<div class="content__item">
+					<span class="content__number">0</span>
+					<h3 class="content__title">워너원 | Wanna One</h3>
+					<h4 class="content__subtitle">Wanna One</h4>
+					<div class="content__text">
+						<ul>
+							<li>소속사 : YMC 엔터테인먼트, SWING 엔터테인먼트</li>
+							<li>데뷔 : 2017-08-07</li>
+							<li>팬덤 : 워너블</li>
+						</ul>
+						<br><hr size="5" noshade>
+						<strong>
+							“All I Wanna Do! Wanna One! 안녕하세요 워너원입니다.”<br>
+				
+						</strong>
+						<hr size="5" noshade><br>
+						Wanna One은 2017년 8월 7일에 데뷔한 대한민국의 11인조 보이그룹이다. 국내 가수 최초로 고척 스카이돔에서 데뷔하였으며 2019년 1월 27일까지 프로젝트 그룹으로서 활동했다.<br><br>
+                        2017년 4월 7일부터 6월 16일까지 약 3개월간 방영된 엠넷의 서바이벌 프로그램 '프로듀스 101 시즌2'을 통해 결성되었다. 프로그램의 폭발적인 인기로 인해 높은 대중성과 탄탄한 팬덤을 갖고 데뷔하였다.
+					</div>
+				</div>
+            
+				<button class="content__close">
+					<svg class="icon icon--longarrow">
+						<use xlink:href="#icon-longarrow"></use>
+					</svg>
+				</button>
+			</div>
+			
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>
