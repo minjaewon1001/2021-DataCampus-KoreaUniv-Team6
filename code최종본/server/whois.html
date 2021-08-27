@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title> Who is He/She?</title>
+		<link href="./css/base.css" rel="stylesheet" type="text/css">
+		<script defer src="menu.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script> function setThumbnail(event) {
+			 var reader = new FileReader();
+			  reader.onload = function(event) {
+					var img = document.createElement("img");
+					img.setAttribute("src", event.target.result);
+					document.querySelector(".go").appendChild(img)
+					 };
+					  reader.readAsDataURL(event.target.files[0]); }
+		 </script>
+	</head>
+	<body>
+		<h1 id ="upload">Upload the Captured Screenshot</h1>
+		<div class="go">
+			<form name = "upload"
+				ref='uploadForm' 
+				id='uploadForm' 
+				action='/main' 
+				method='post' 
+				encType="multipart/form-data">
+				<div class="btn">
+					<input id="btn_upload"type="file" name="sampleFile" onchange="setThumbnail(event);"/>
+				</div>
+				<h2 id="arrow"> > </h2>
+				<div class="btn">	
+					<input id="btn_submit" type='submit' value='Who is?'/>
+				</div>
+			</form>
+		</div>		
+	</body>
+</html>
